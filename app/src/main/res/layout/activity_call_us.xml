@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_signup"
+    tools:context="com.yako.safekids.activity.CallUs">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:theme="@style/whiteStyle"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginRight="64dp"
+        android:text="اتصل بنا"
+        android:textColor="#fff"
+        android:textSize="@dimen/text_medium_size"
+        android:gravity="center_vertical|right" />
+
+    <ScrollView
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/text_header_contact_us"
+                android:textSize="@dimen/text_normal_size"
+                android:textColor="@color/colorPrimary"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp" />
+
+            <EditText
+                android:id="@+id/txtObjet"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginRight="36dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/back_gray"
+                android:gravity="center_vertical|right"
+                android:textSize="@dimen/text_normal_size"
+                android:hint="عنوان الرسالة"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp" />
+
+            <EditText
+                android:id="@+id/txtMessage"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginRight="36dp"
+                android:background="@drawable/back_gray"
+                android:gravity="right"
+                android:hint="رسالتك"
+                android:padding="16dp"
+                android:textSize="@dimen/text_normal_size" />
+
+            <TextView
+                android:id="@+id/txtSend"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginRight="36dp"
+                android:layout_marginBottom="36dp"
+                android:gravity="center"
+                android:background="@drawable/back_blue"
+                android:text="إرسال"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_normal_size" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

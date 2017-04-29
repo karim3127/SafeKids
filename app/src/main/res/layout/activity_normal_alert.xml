@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#1000"
+    tools:context="com.yako.safekids.activity.NormalAlert">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="8dp"
+            android:layout_margin="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bg_popup_choose_kids"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:id="@+id/img_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="122dp"
+                    android:scaleType="centerCrop"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="122dp"
+                    android:background="#4000" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgKids"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    app:border_color="#fff"
+                    app:border_width="1dp"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_toLeftOf="@+id/imgKids"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/imgKids"
+                        android:text="ياسمين احمد  عبد الرحمن"
+                        android:textSize="@dimen/text_normal_size"
+                        android:textColor="#fff"
+                        android:paddingRight="8dp"
+                        android:layout_marginLeft="16dp"
+                        android:gravity="right" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical|right"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:id="@+id/txtAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/imgKids"
+                            android:text="4 سنوات"
+                            android:textSize="@dimen/text_normal_size"
+                            android:textColor="#fff"
+                            android:padding="4dp"
+                            android:gravity="center_vertical|right" />
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:padding="4dp"
+                            android:src="@drawable/ic_calender_white"
+                            android:layout_marginRight="4dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_close"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/ic_cancel"
+                    android:padding="4dp" />
+
+                <com.yako.safekids.view.tabs.SlidingTabLayout
+                    android:id="@+id/tabs"
+                    android:layout_below="@+id/imgKids"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="#0fff" />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    android:layout_below="@+id/tabs" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</RelativeLayout>

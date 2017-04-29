@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yako.safekids.activity.NewKids">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:theme="@style/whiteStyle"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginRight="64dp"
+        android:text="إضافة طفل جديد"
+        android:textColor="#fff"
+        android:textSize="@dimen/text_medium_size"
+        android:gravity="center_vertical|right" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgUser"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true"
+                    app:border_color="@color/colorPrimary"
+                    app:border_width="3dp"
+                    android:src="@drawable/ic_avatar"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <ImageView
+                    android:id="@+id/img_new_img"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_alignBottom="@+id/imgUser"
+                    android:layout_alignRight="@+id/imgUser"
+                    android:src="@drawable/ic_upload_image"
+                    android:layout_marginRight="-4dp"
+                    android:layout_marginBottom="-4dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/ic_login_blue"
+                    android:padding="12dp" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text=""
+                    android:hint="إسم الطفل"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColorHint="@color/colorGray"
+                    android:textColor="@color/colorGray"
+                    android:padding="8dp"
+                    android:layout_marginRight="56dp"
+                    android:layout_marginLeft="16dp"
+                    android:gravity="center_vertical|right" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/ic_calender"
+                    android:padding="12dp" />
+
+                <EditText
+                    android:id="@+id/et_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:inputType="number"
+                    android:text=""
+                    android:hint="عمر الطفل"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColorHint="@color/colorGray"
+                    android:textColor="@color/colorGray"
+                    android:maxLength="2"
+                    android:padding="8dp"
+                    android:layout_marginRight="56dp"
+                    android:layout_marginLeft="16dp"
+                    android:gravity="center_vertical|right" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp">
+
+                    <com.rey.material.widget.RadioButton
+                        style="@style/Material.Drawable.RadioButton"
+                        android:id="@+id/rb1"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|right"
+                        android:text="أنثى"
+                        android:textSize="@dimen/text_normal_size"
+                        android:textColor="@color/colorGray"
+                        app:rbd_strokeColor="@color/radio_color_state_list"
+                        android:layout_marginRight="24dp" />
+
+
+                    <com.rey.material.widget.RadioButton
+                        style="@style/Material.Drawable.RadioButton"
+                        android:id="@+id/rb2"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|right"
+                        android:text="ذكر"
+                        android:textSize="@dimen/text_normal_size"
+                        android:textColor="@color/colorGray"
+                        app:rbd_strokeColor="@color/radio_color_state_list"
+                        android:layout_marginLeft="24dp" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:id="@+id/txtAddKids"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="إضافة"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColor="#fff"
+                    android:background="@drawable/back_rounded_blue"
+                    android:paddingRight="36dp"
+                    android:paddingLeft="36dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlBlock"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8fff">
+
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_centerInParent="true"
+            android:id="@+id/avloadingIndicatorView"
+            android:layout_width="56dp"
+            android:layout_height="42dp"
+            app:indicator="BallPulse"
+            app:indicator_color="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

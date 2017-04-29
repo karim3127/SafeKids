@@ -1,0 +1,39 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/containerItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true">
+
+    <TextView
+        android:id="@+id/ccName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:text="tunisie"
+        android:layout_toLeftOf="@+id/ccCode"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/text_normal_size"
+        android:ellipsize="end"
+        android:lines="1" />
+
+    <TextView
+        android:id="@+id/ccCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="216"
+        android:padding="12dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_normal_size"
+        android:layout_alignParentRight="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/ccName"
+        android:background="@color/colorGrayLight"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp" />
+</RelativeLayout>
+

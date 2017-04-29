@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yako.safekids.activity.ProfilSetting">
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="274dp"
+        android:elevation="2dp"
+        android:background="@drawable/bg_profil_setting">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#0fff"
+            app:theme="@style/whiteStyle"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:text="@string/Profil"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_medium_size"
+            android:gravity="right|center_vertical"
+            android:layout_marginRight="64dp" />
+
+        <ImageView
+            android:id="@+id/imgEdit"
+            android:layout_width="32dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_edit_white"
+            android:padding="3dp"
+            android:layout_marginLeft="14dp"
+            android:layout_alignParentLeft="true" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgUser"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:layout_centerHorizontal="true"
+            app:border_color="#fff"
+            app:border_width="3dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_below="@+id/imgUser"
+            android:text="محمد ماهر  عمر"
+            android:textSize="@dimen/text_large_size"
+            android:textColor="#fff"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:id="@+id/llInfo"
+            android:layout_below="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:orientation="horizontal"
+            android:background="@drawable/back_rounded_fort_white"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/ic_drawer_notif"
+                    android:padding="2dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_centerVertical="true"
+                    android:text="@string/No_alerts"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="left"
+                    android:layout_marginLeft="8dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/ic_profil_kids"/>
+
+                <TextView
+                    android:id="@+id/txtNbKids"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_centerVertical="true"
+                    android:text="@string/kids_number"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="left"
+                    android:layout_marginLeft="8dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.yako.safekids.view.tabs.SlidingTabLayout
+            android:id="@+id/tabs"
+            android:layout_below="@+id/llInfo"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="#0fff"
+            android:layout_marginTop="8dp" />
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:layout_below="@+id/rlTop" />
+
+</RelativeLayout>

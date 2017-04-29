@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_signup"
+    tools:context="com.yako.safekids.activity.About">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:theme="@style/whiteStyle"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginRight="64dp"
+        android:text="الإعدادات"
+        android:textColor="#fff"
+        android:textSize="@dimen/text_medium_size"
+        android:gravity="center_vertical|right" />
+
+    <ScrollView
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/ic_car_blue"
+                    android:layout_marginRight="24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="تنبيه السرعة"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColor="@color/colorGray"
+                    android:gravity="right"
+                    android:layout_marginRight="72dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_alignParentRight="true" />
+
+                <com.rey.material.widget.Switch
+                    android:id="@+id/switch_speed"
+                    style="@style/Material.Widget.Switch"
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    app:sw_trackColor="@color/switch_track_color_state_list"
+                    app:sw_thumbColor="@color/switch_thumb_color_state_list"
+                    android:layout_alignParentRight="false" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#4000"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/ic_drawer_kids"
+                    android:layout_marginRight="24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="التنبيهات الثابتة"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColor="@color/colorGray"
+                    android:gravity="right"
+                    android:layout_marginRight="72dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_alignParentRight="true" />
+
+                <com.rey.material.widget.Switch
+                    android:id="@+id/switch_alarme"
+                    style="@style/Material.Widget.Switch"
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    app:sw_trackColor="@color/switch_track_color_state_list"
+                    app:sw_thumbColor="@color/switch_thumb_color_state_list"
+                    android:layout_alignParentRight="false" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#4000"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/ic_drawer_kids"
+                    android:layout_marginRight="24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="التنبيهات من حولي"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColor="@color/colorGray"
+                    android:gravity="right"
+                    android:layout_marginRight="72dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_alignParentRight="true" />
+
+                <com.rey.material.widget.Switch
+                    android:id="@+id/switch_notification"
+                    style="@style/Material.Widget.Switch"
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    app:sw_trackColor="@color/switch_track_color_state_list"
+                    app:sw_thumbColor="@color/switch_thumb_color_state_list"
+                    android:layout_alignParentRight="false" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#4000"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/ic_drawer_home"
+                    android:layout_marginRight="24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="نافذة التنبيه عند الخروج"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColor="@color/colorGray"
+                    android:gravity="right"
+                    android:layout_marginRight="72dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_alignParentRight="true" />
+
+                <com.rey.material.widget.Switch
+                    android:id="@+id/switch_exit_alert"
+                    style="@style/Material.Widget.Switch"
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    app:sw_trackColor="@color/switch_track_color_state_list"
+                    app:sw_thumbColor="@color/switch_thumb_color_state_list"
+                    android:layout_alignParentRight="false" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#4000"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/ic_speed_blue"
+                    android:layout_marginRight="24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="السرعة القصوى"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColor="@color/colorGray"
+                    android:gravity="right"
+                    android:layout_marginRight="72dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_alignParentRight="true" />
+
+                <TextView
+                    android:id="@+id/tv_speed"
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text=""
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center" />
+
+                <LinearLayout
+                    android:id="@+id/ll_speed"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="16dp" >
+
+                    <ImageView
+                        android:id="@+id/img_speed"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_check_mark_green"
+                        android:layout_margin="4dp" />
+
+                    <EditText
+                        android:id="@+id/et_speed"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:inputType="numberDecimal"
+                        android:digits="0123456789"
+                        android:maxLength="3"
+                        android:textSize="@dimen/text_normal_size"
+                        android:textColor="@color/colorBlack"
+                        android:background="#0FFF"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#4000"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/ic_call_temperature_blue"
+                    android:layout_marginRight="24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="الحرارة القصوى"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColor="@color/colorGray"
+                    android:gravity="right"
+                    android:layout_marginRight="72dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_alignParentRight="true" />
+
+                <TextView
+                    android:id="@+id/tv_temp"
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text=""
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:layout_alignParentRight="false" />
+
+                <LinearLayout
+                    android:id="@+id/ll_temp"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="16dp" >
+
+                    <ImageView
+                        android:id="@+id/img_temp"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_check_mark_green"
+                        android:layout_margin="4dp" />
+
+                    <EditText
+                        android:id="@+id/et_temp"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:inputType="numberDecimal"
+                        android:digits="0123456789"
+                        android:maxLength="2"
+                        android:textSize="@dimen/text_normal_size"
+                        android:textColor="@color/colorBlack"
+                        android:background="#0FFF"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#4000"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#1000"
+    tools:context="com.yako.safekids.activity.NormalAlert">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="8dp"
+            android:layout_margin="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bg_popup_choose_kids"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:id="@+id/img_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="112dp"
+                    android:scaleType="centerCrop"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="112dp"
+                    android:background="#77f10d0d" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgKids"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="24dp"
+                    app:border_color="#fff"
+                    app:border_width="1dp"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_toLeftOf="@+id/imgKids"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignTop="@+id/imgKids">
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/imgKids"
+                        android:text="ياسمين احمد  عبد الرحمن"
+                        android:textSize="@dimen/text_normal_size"
+                        android:textColor="#fff"
+                        android:paddingRight="8dp"
+                        android:layout_marginLeft="16dp"
+                        android:gravity="right"
+                        android:layout_marginTop="16dp" />
+
+                    <TextView
+                        android:id="@+id/txtNextTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/imgKids"
+                        android:text="التذكير بعد 15 دقيقة"
+                        android:textSize="@dimen/text_large_size"
+                        android:textColor="#fff"
+                        android:paddingRight="8dp"
+                        android:layout_marginLeft="16dp"
+                        android:gravity="right"
+                        android:layout_marginTop="16dp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_close"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/ic_cancel"
+                    android:padding="4dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/img_back">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_alert_over_speed"
+                        android:padding="16dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="bottom">
+
+                            <TextView
+                                android:id="@+id/tv_speed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toLeftOf="@+id/imgKids"
+                                android:text="130"
+                                android:textSize="@dimen/text_big_size"
+                                android:textColor="@color/colorRedAlert"
+                                android:gravity="center" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="  km/h"
+                                android:textSize="@dimen/text_medium_size"
+                                android:textColor="@color/colorRedAlert"
+                                android:gravity="center" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="تجاوزت السرعة المعتادة"
+                            android:textSize="@dimen/text_medium_size"
+                            android:textColor="@color/colorRedAlert"
+                            android:layout_marginTop="24dp"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="24dp"
+                    android:src="@drawable/ic_drawer_home"
+                    android:layout_marginTop="24dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="72dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="المدينة"
+                        android:textSize="@dimen/text_small_size"
+                        android:textColor="@color/colorGray"
+                        android:paddingRight="16dp"
+                        android:gravity="right" />
+
+                    <EditText
+                        android:id="@+id/et_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:text="رام الله"
+                        android:textSize="@dimen/text_normal_size"
+                        android:textColor="#23416b"
+                        android:gravity="right"
+                        android:enabled="false"
+                        android:layout_marginTop="-4dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="24dp"
+                    android:src="@drawable/ic_drawer_phone"
+                    android:layout_marginTop="24dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="72dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="رقم الهاتف"
+                        android:textSize="@dimen/text_small_size"
+                        android:textColor="@color/colorGray"
+                        android:paddingRight="16dp"
+                        android:gravity="right" />
+
+                    <EditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:text="00934657534"
+                        android:textSize="@dimen/text_normal_size"
+                        android:textColor="#23416b"
+                        android:gravity="right"
+                        android:enabled="false"
+                        android:layout_marginTop="-4dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="24dp"
+                    android:src="@drawable/ic_car_blue"
+                    android:layout_marginTop="24dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="72dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="نوع السيارة"
+                        android:textSize="@dimen/text_small_size"
+                        android:textColor="@color/colorGray"
+                        android:paddingRight="16dp"
+                        android:gravity="right" />
+
+                    <EditText
+                        android:id="@+id/et_car_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:text="مرسيدس"
+                        android:textSize="@dimen/text_normal_size"
+                        android:textColor="#23416b"
+                        android:gravity="right"
+                        android:enabled="false"
+                        android:layout_marginTop="-4dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="24dp"
+                    android:src="@drawable/ic_car_color_blue"
+                    android:layout_marginTop="24dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="72dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="لون السيارة"
+                        android:textSize="@dimen/text_small_size"
+                        android:textColor="@color/colorGray"
+                        android:paddingRight="16dp"
+                        android:gravity="right" />
+
+                    <EditText
+                        android:id="@+id/et_car_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:text="سلفر"
+                        android:textSize="@dimen/text_normal_size"
+                        android:textColor="#23416b"
+                        android:gravity="right"
+                        android:enabled="false"
+                        android:layout_marginTop="-4dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="24dp"
+                    android:src="@drawable/ic_car_num_blue"
+                    android:layout_marginTop="24dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="72dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="رقم السيارة"
+                        android:textSize="@dimen/text_small_size"
+                        android:textColor="@color/colorGray"
+                        android:paddingRight="16dp"
+                        android:gravity="right" />
+
+                    <EditText
+                        android:id="@+id/et_car_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:text="1055483"
+                        android:textSize="@dimen/text_normal_size"
+                        android:textColor="#23416b"
+                        android:gravity="right"
+                        android:enabled="false"
+                        android:layout_marginTop="-4dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

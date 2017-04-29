@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yako.safekids.activity.KidsDetails">
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="252dp"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_profil_setting" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#5000" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#0fff"
+            app:theme="@style/whiteStyle"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:text="@string/Details"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_medium_size"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="64dp" />
+
+        <ImageView
+            android:id="@+id/imgMore"
+            android:layout_width="32dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_more_white"
+            android:padding="3dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="14dp" />
+
+        <ImageView
+            android:id="@+id/imgEdit"
+            android:layout_width="32dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_edit_white"
+            android:padding="3dp"
+            android:layout_marginRight="56dp"
+            android:layout_alignParentRight="true" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgUser"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:layout_centerHorizontal="true"
+            app:border_color="#fff"
+            app:border_width="3dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgUser"
+            android:text="محمد أحمد عبد الرحمان"
+            android:textSize="@dimen/text_large_size"
+            android:textColor="#fff"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:id="@+id/llInfo"
+            android:layout_below="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginLeft="18dp"
+            android:orientation="horizontal"
+            android:background="@drawable/back_rounded_fort_white"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/ic_drawer_notif"
+                    android:padding="2dp" />
+
+                <TextView
+                    android:id="@+id/tv_nb_alarme"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_centerVertical="true"
+                    android:text="@string/No_alerts"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="left"
+                    android:layout_marginLeft="8dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/ic_calender"
+                    android:padding="1dp" />
+
+                <TextView
+                    android:id="@+id/tv_age"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_centerVertical="true"
+                    android:text="@string/age_kids_detail"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="left"
+                    android:layout_marginLeft="8dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/rlTop">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="false"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/ic_drawer_home"
+                android:layout_marginLeft="24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/Alert_state"
+                android:textSize="@dimen/text_normal_size"
+                android:textColor="@color/colorGray"
+                android:gravity="left"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="72dp" />
+
+            <com.rey.material.widget.Switch
+                android:id="@+id/switch_status"
+                style="@style/Material.Widget.Switch"
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:checked="true"
+                android:gravity="center"
+                android:padding="16dp"
+                app:sw_trackColor="@color/switch_track_color_state_list"
+                app:sw_thumbColor="@color/switch_thumb_color_state_list"
+                android:layout_alignParentRight="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#4000"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPlaning"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="false"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/ic_drawer_kids"
+                android:layout_marginLeft="24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/Planing"
+                android:textSize="@dimen/text_normal_size"
+                android:textColor="@color/colorGray"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="72dp"
+                android:gravity="left" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_left_gray_en"
+                android:layout_marginRight="24dp"
+                android:layout_alignParentRight="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#4000"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlOthers"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:visibility="gone"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="false"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/ic_drawer_notif"
+                android:layout_marginLeft="24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Other details"
+                android:textSize="@dimen/text_normal_size"
+                android:textColor="@color/colorGray"
+                android:gravity="left"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="72dp" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_left_gray_en"
+                android:layout_marginRight="24dp"
+                android:layout_alignParentRight="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#4000"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

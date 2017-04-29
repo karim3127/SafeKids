@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yako.safekids.activity.KidsEdit">
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_profil_setting"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#5000" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#0fff"
+            app:theme="@style/whiteStyle"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:text="@string/Kids"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_medium_size"
+            android:gravity="right|center_vertical"
+            android:layout_marginRight="64dp" />
+
+        <TextView
+            android:id="@+id/txtValide"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:text="@string/Valid"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_normal_size"
+            android:gravity="center_vertical|left"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp" />
+
+        <RelativeLayout
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgUser"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                app:border_color="#fff"
+                app:border_width="3dp"
+                android:layout_marginBottom="16dp" />
+
+            <ImageView
+                android:id="@+id/img_new_img"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_alignBottom="@+id/imgUser"
+                android:layout_alignRight="@+id/imgUser"
+                android:src="@drawable/ic_upload_image"
+                android:layout_marginRight="-4dp"
+                android:layout_marginBottom="-4dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@+id/rlTop"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="false"
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/ic_login_blue"
+                    android:padding="12dp"
+                    android:layout_marginLeft="8dp" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text=""
+                    android:hint="@string/kids_name"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColorHint="@color/colorGray"
+                    android:textColor="@color/colorGray"
+                    android:padding="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="56dp"
+                    android:gravity="left|center_vertical" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="false"
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/ic_calender"
+                    android:padding="12dp"
+                    android:layout_marginLeft="8dp" />
+
+                <EditText
+                    android:id="@+id/et_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text=""
+                    android:hint="@string/kids_age"
+                    android:textSize="@dimen/text_normal_size"
+                    android:inputType="number"
+                    android:textColorHint="@color/colorGray"
+                    android:textColor="@color/colorGray"
+                    android:maxLength="2"
+                    android:padding="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="56dp"
+                    android:gravity="left|center_vertical" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlBlock"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8fff"
+        android:elevation="2dp">
+
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_centerInParent="true"
+            android:id="@+id/avloadingIndicatorView"
+            android:layout_width="56dp"
+            android:layout_height="42dp"
+            app:indicator="BallPulse"
+            app:indicator_color="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

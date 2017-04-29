@@ -1,0 +1,352 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_drawer">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlSafKids"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="false"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_drawer_kids"
+                    android:layout_marginLeft="24dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/list_of_kids"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColor="@color/colorGray"
+                    android:gravity="left"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="72dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="72dp"
+                    android:background="#4000"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlNotif"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="false"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_drawer_notif"
+                    android:layout_marginLeft="24dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/Notifications"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColor="@color/colorGray"
+                    android:gravity="left"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="72dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="72dp"
+                    android:background="#4000"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlNumTel"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="false"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_drawer_phone"
+                    android:layout_marginLeft="24dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/phone_numbers"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColor="@color/colorGray"
+                    android:gravity="left"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="72dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="72dp"
+                    android:background="#4000"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlSetting"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="false"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_drawer_setting"
+                    android:layout_marginLeft="24dp"
+                    android:padding="1dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/settings"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColor="@color/colorGray"
+                    android:gravity="left"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="72dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="72dp"
+                    android:background="#4000"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlNotice"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="false"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_drawer_notice"
+                    android:layout_marginLeft="24dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/Notice"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColor="@color/colorGray"
+                    android:gravity="left"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="72dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="72dp"
+                    android:background="#4000"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCallus"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="false"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_drawer_callus"
+                    android:layout_marginLeft="24dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/Contact_us"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColor="@color/colorGray"
+                    android:gravity="left"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="72dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="72dp"
+                    android:background="#4000"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlAbout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="false"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_drawer_about"
+                    android:layout_marginLeft="24dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/About_us"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColor="@color/colorGray"
+                    android:gravity="left"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="72dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="72dp"
+                    android:background="#4000"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlShare"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="false"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_drawer_share"
+                    android:layout_marginLeft="24dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/Share"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textColor="@color/colorGray"
+                    android:gravity="left"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="72dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="72dp"
+                    android:background="#4000"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/ic_drawer_bg_profil"
+        android:layout_alignParentBottom="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgUser"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentRight="false"
+            app:border_color="#fff"
+            app:border_width="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="محمد ماهر  عمر"
+            android:textSize="@dimen/text_large_size"
+            android:textColor="#fff"
+            android:gravity="right"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toRightOf="@+id/imgUser"
+            android:layout_marginLeft="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:layout_toRightOf="@+id/imgUser"
+            android:layout_marginLeft="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_drawer_logout_en"/>
+
+            <TextView
+                android:id="@+id/tv_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Logout"
+                android:textSize="@dimen/text_normal_size"
+                android:textColor="#b3ddff"
+                android:gravity="right"
+                android:layout_marginLeft="8dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

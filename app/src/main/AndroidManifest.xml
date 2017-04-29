@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.safekids.android">
+
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- VERY IMPORTANT! Don't forget this permission, or in-app billing won't work. -->
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.safekids.android.permission.C2D_MESSAGE" />
+    <permission
+        android:name="com.safekids.android.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name="com.yako.safekids.SafeKidsApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launch"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="false"
+        tools:replace="icon">
+        <activity
+            android:name="com.yako.safekids.activity.SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppLogoTransparentTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.yako.safekids.activity.IntroSlider"
+            android:label="@string/title_activity_intro_slider"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name="com.yako.safekids.activity.Connexion"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/RegistrationAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yako.safekids.activity.SignUp"
+            android:label="@string/title_activity_sign_up"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeWhite"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yako.safekids.activity.MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yako.safekids.activity.ProfilSetting"
+            android:label="@string/title_activity_profil_setting"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yako.safekids.activity.Setting"
+            android:label="@string/title_activity_about"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yako.safekids.activity.About"
+            android:label="@string/title_activity_about"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yako.safekids.activity.Help"
+            android:label="@string/title_activity_help"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yako.safekids.activity.CallUs"
+            android:label="@string/title_activity_call_us"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yako.safekids.activity.Notice"
+            android:label="@string/title_activity_notice"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yako.safekids.activity.PhoneNumberList"
+            android:label="@string/title_activity_phone_number"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yako.safekids.activity.Notification"
+            android:label="@string/title_activity_notification"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yako.safekids.activity.NewKids"
+            android:label="@string/title_activity_new_kids"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yako.safekids.activity.KidsDetails"
+            android:label="@string/title_activity_kids_details"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yako.safekids.activity.KidsOtherDetails"
+            android:label="@string/title_activity_kids_other_details"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yako.safekids.activity.KidsPlaning"
+            android:label="@string/title_activity_kids_planing"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yako.safekids.activity.KidsEdit"
+            android:label="@string/title_activity_kids_edit"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yako.safekids.activity.KidsList"
+            android:label="@string/title_activity_kids_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yako.safekids.activity.ProfilUpdate"
+            android:label="@string/title_activity_profil_update"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.yako.safekids.activity.FirstAlert"
+            android:label="@string/title_activity_first_alert"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yako.safekids.activity.SecondAlert"
+            android:label="@string/title_activity_first_alert"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yako.safekids.activity.Alarme"
+            android:label="@string/title_activity_first_alert"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yako.safekids.activity.NormalAlert"
+            android:label="@string/title_activity_normal_alert"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent" />
+        <activity
+            android:name="com.yako.safekids.activity.RequestAlert"
+            android:label="@string/title_activity_normal_alert"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppLogoTransparentTheme" />
+        <activity
+            android:name="com.yako.safekids.activity.AlertSpeed"
+            android:label="@string/title_activity_normal_alert"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent" />
+        <activity
+            android:name="com.yako.safekids.activity.RedAlert"
+            android:label="@string/title_activity_normal_alert"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent" />
+        <activity
+            android:name="com.yako.safekids.activity.NotificationAlert"
+            android:label="@string/title_activity_normal_alert"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent" />
+
+        <!-- API key for the Android Maps API v2. The value is defined as a string resource.
+         C7:CE:67:64:B1:B0:48:EA:05:EC:41:A2:75:A9:70:C9:40:20:13:BA-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBgmKhSL2PkQoS0IhbUM2gGxmdjCvFJT70" />
+
+        <receiver android:name="com.yako.safekids.receiver.PushReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.safekids.android"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.backendless.AndroidService" />
+
+
+
+        <service
+            android:name="com.yako.safekids.service.MonitorService"
+            android:exported="true"
+            android:enabled="true"
+            android:stopWithTask="false" />
+        <service
+            android:name="com.yako.safekids.service.NotiNearbyService"
+            android:exported="true"
+            android:enabled="true"
+            android:stopWithTask="false" />
+        <service
+            android:name="com.yako.safekids.service.SpeedService"
+            android:exported="true"
+            android:enabled="true"
+            android:stopWithTask="false" />
+        <service
+            android:name="com.yako.safekids.service.GpsServices"
+            android:exported="true"
+            android:enabled="true"
+            android:stopWithTask="false" />
+
+        <receiver android:name="com.yako.safekids.receiver.AlarmManagerBroadcastReceiver" />
+        <receiver android:name="com.yako.safekids.receiver.MyBroadcastService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED">
+                    <category android:name="android.intent.category.DEFAULT"/>
+                </action>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
