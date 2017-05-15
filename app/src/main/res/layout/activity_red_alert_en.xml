@@ -84,7 +84,7 @@
                             android:layout_marginLeft="24dp"
                             android:gravity="center"
                             android:padding="8dp"
-                            android:text="@string/alerte_stop_Valid"
+                            android:text="@string/alerte_red_valide"
                             android:textColor="@color/colorPrimary"
                             android:textSize="@dimen/text_medium_size" />
 

@@ -1,0 +1,257 @@
+<resources>
+
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+
+    <string name="time_today">היום</string>
+    <string name="time_yesterday">אתמול</string>
+
+    <string-array name="time_days_of_week">
+        <item>יוֹם ראשון</item>
+        <item>יוֹם שני</item>
+        <item>יוֹם שלישי</item>
+        <item>יום רביעי</item>
+        <item>יוֹם חֲמישי</item>
+        <item>יוֹם שישי</item>
+        <item>יום שבת</item>
+    </string-array>
+
+    <string name="Sun">יוֹם ראשון</string>
+    <string name="Mon">יוֹם שני</string>
+    <string name="Tues">יוֹם שלישי</string>
+    <string name="Wed">יום רביעי</string>
+    <string name="Thurs">יוֹם חֲמישי</string>
+    <string name="Fri">יוֹם שישי</string>
+    <string name="Sat">יום שבת</string>
+
+    <string name="waiting_for_fix">Waiting for gps fix …</string>
+    <string name="gps_disabled">Gps disabled</string>
+    <string name="please_enable_gps">In order to use this app you need the gps to be enabled.</string>
+
+    <string name="open_weather_maps_app_id">11111</string>
+
+    <string name="app_name">Safe Kids</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="title_activity_sign_up">SignUp</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_profil_setting">ProfilSetting</string>
+    <string name="title_activity_about">About</string>
+    <string name="title_activity_help">Help</string>
+    <string name="title_activity_call_us">CallUs</string>
+    <string name="title_activity_notice">Notice</string>
+    <string name="title_activity_phone_number">PhoneNumber</string>
+    <string name="title_activity_notification">Notification</string>
+    <string name="title_activity_new_kids">NewKids</string>
+    <string name="title_activity_kids_details">KidsDetails</string>
+    <string name="title_activity_kids_other_details">KidsOtherDetails</string>
+    <string name="title_activity_kids_planing">KidsPlaning</string>
+    <string name="title_activity_kids_edit">KidsEdit</string>
+    <string name="title_activity_kids_list">KidsList</string>
+    <string name="title_activity_profil_update">ProfilUpdate</string>
+    <string name="title_activity_first_alert">FirstAlert</string>
+    <string name="title_activity_normal_alert">NormalAlert</string>
+    <string name="title_activity_intro_slider">IntroSlider</string>
+
+
+    <string name="speed_button_to_replay_en">הזכיר לי אחר 15 דקות</string>
+    <string name="message_speed_en">Exceeded the usual speed</string>
+    <string name="age_normal_alerte">גיל:</string>
+    <string name="nombre_years_normal_alert">שנים</string>
+    <string name="one_year_normal_alert">שנה</string>
+    <string name="first_alerte_Humidity">לחות</string>
+    <string name="first_alerte_Temperature">טמפרטורה</string>
+    <string name="first_alerte_Timeout">הזמן הנותר</string>
+    <string name="first_alerte_Coordinates">קואורדינטות</string>
+    <string name="first_alerte_Location">מקום</string>
+    <string name="first_alerte_Delete_alert">ביטול התראה</string>
+    <string name="first_alerte_Dismiss">התעלם</string>
+    <string name="back_alerte_coordinates">קואורדינטות</string>
+    <string name="back_alerte_Informations">מידע</string>
+    <string name="alerte_stop_text">you have stopped your car, would you like to make alert for your kids ?</string>
+    <string name="alerte_red_text">Have you returned to your car !!</string>
+    <string name="alerte_red_text_notif">You have a problem </string>
+    <string name="alerte_stop_cancel">ביטול</string>
+    <string name="alerte_red_cancel">Not yet</string>
+    <string name="alerte_not_cancel">I can not</string>
+    <string name="alerte_red_valide">Yes</string>
+    <string name="alerte_stop_Valid">לך עכשיו</string>
+    <string name="numbers_phone_header">נא להוסיף כאן מספרי חירום לפנות אליהם במקרה שכיחת הילד בתוך הרכב</string>
+    <string name="no_alerte">אין התראות</string>
+    <string name="one_alerte">התראה</string>
+    <string name="nombre_alertes">התראות</string>
+    <string name="confirme_delete_kids">האם אתה רוצה למחוק ?</string>
+    <string name="Valid_delete_kids">אישור</string>
+    <string name="Cancel_delete_kids">ביטול</string>
+    <string name="annee">שנה אחד</string>
+    <string name="two_yers">שנים</string>
+    <string name="years">years</string>
+    <string name="Planing">Plning</string>
+    <string name="Alert_state">מצב התראה</string>
+    <string name="age_kids_detail">גיל</string>
+    <string name="No_alerts">אין התראות</string>
+    <string name="day">יום</string>
+    <string name="Night">לַיְלָה</string>
+    <string name="Modify">לְשַׁנוֹת</string>
+    <string name="Delete">מחק</string>
+    <string name="Alert_Planing">Alert Planing</string>
+    <string name="Kids">הילדים</string>
+    <string name="Use_camera">השתמש במצלמה</string>
+    <string name="Choose_from_gallery">בחר מהגלריה</string>
+    <string name="Cancel">ביטול</string>
+    <string name="Valid">אישור</string>
+    <string name="kids_name">שם הילד</string>
+    <string name="kids_age">גיל הילד</string>
+    <string name="Add_new_kid">הוסף ילד חדש</string>
+    <string name="female">נְקֵבָה</string>
+    <string name="male">זָכָר</string>
+    <string name="Ful_name">שם מלא</string>
+    <string name="Login">שם משתמש</string>
+    <string name="Password">סיסמאה</string>
+    <string name="City">עיר</string>
+    <string name="Phone_number">מספר הטלפון</string>
+    <string name="car_type">סוג הרכב</string>
+    <string name="cart_color">צבע הרכב</string>
+    <string name="car_number">מספר הרכב</string>
+    <string name="sign_up">הירשם</string>
+    <string name="Profil">חשבון</string>
+    <string name="Notifications">התראות</string>
+    <string name="Notice">הוראות</string>
+    <string name="About_us">אודות</string>
+    <string name="Need_help">זקוק לעזרה</string>
+    <string name="kids_number">מספר ילדים</string>
+    <string name="Sign_in">היכנס</string>
+    <string name="Forget_password">שכחת את הסיסמה</string>
+    <string name="new_account">אין לך חשבון? להירשם?</string>
+    <string name="number_kids">מספר ילדים:</string>
+    <string name="list_of_kids">רשימה הילדים</string>
+    <string name="phone_numbers">מספרי חירום</string>
+    <string name="settings">הגדרות</string>
+    <string name="Contact_us">צור קשר</string>
+    <string name="Logout">התנתק</string>
+    <string name="add_user_name">להוסיף שם משתמש</string>
+    <string name="add_password_new">להוסיף סיסמה</string>
+    <string name="add_new_kids">להוסיף ילד חדש</string>
+    <string name="Add_phone_number">הוסף  מספר הטלפון</string>
+    <string name="savekids">safe kids</string>
+    <string name="delete_alerte">Delete alert</string>
+    <string name="alerte_oxygene">Lack of oxygen .. safe your car.</string>
+    <string name="speeding">Speeding .. safe your car.</string>
+    <string name="followus">עקבו אחרינו</string>
+    <string name="kids">הילדים</string>
+    <string name="info_personnel">מידע</string>
+    <string name="Select_all">בחר כל הילדים</string>
+    <string name="Choose_kids">בחר הילד</string>
+    <string name="twenty_munite">20 דקות</string>
+    <string name="fivten_munites">15 דקות</string>
+    <string name="ten_munite">10 דקות</string>
+    <string name="five_munite">5 דקות</string>
+    <string name="alerte_date">זמן התראה</string>
+
+    <string name="Details">ôøèéí</string>
+    <string name="fix_time">Fix alert time</string>
+    <string name="check_all_day">áçø ëì äéîéí</string>
+    <string name="Auto_alert">úæëåøú àåèåîèéú</string>
+    <string name="text_alerte">ëåúøú äúøàä</string>
+
+    <string name="text_share">ùúó äàôìé÷öéä...</string>
+
+    <string name="Delete_kid">îçé÷ä äéìã</string>
+    <string name="delete_number">îçé÷ä îñôø</string>
+
+    <string name="max_speed">המהירות המרבית היא יותר מ -50</string>
+    <string name="enter_max_temp">äæï àú äèîôøèåøä äî÷ñéîìéú</string>
+    <string name="Speed_alert">äúøàú îäéøåú</string>
+    <string name="Planing_alert">äúøàåú ÷áåòä</string>
+    <string name="Planing_nearby">Alert nearby</string>
+    <string name="Alert_popup_on_exit"> äúøàä òì éöéàä</string>
+    <string name="Max_Speed">îäéøåú î÷ñéîìéú</string>
+    <string name="Max_Temperature">èîôøèåøä î÷ñéîìéú</string>
+
+
+
+    >
+
+    <string name="slid_intro_desc_0">מערכת המגנה על הילדים שלך 24 שעות</string>
+    <string name="slid_intro_desc_1">מהיום אתם לא תשכחו את הילדים שלך בתוך הרכב וזה בזכות אפליקציה  Safe Kids החכמה .</string>
+    <string name="slid_intro_desc_2">מערכת חכמה המתקשרת עם ההורים במקרה שהילד הלך לאיבוד או במקרה שהוא לא מתקשר עם האפלקציה. המערכת שולחת הודעה על מיקום הילד, שמו, זמן אחרון, סוג  צבע ומס הרכב</string>
+    <string name="slid_intro_desc_3">מערכת המסנכרת את הזמנים לכל ילד ושומרת את מיקומם האחרון כדי לא לשכוח אותם בתוך הרכב</string>
+    <string name="slid_intro_desc_4">מערכת התראות אוטומטית מלווה אותך ומגנה על הילדים שלך מפני הסכנות</string>
+
+    <string name="text_header_contact_us">פנייתכם חשובה לנו. צרו עימנו קשר באמצעות טופס זה, בכל בעיה, שאלה, הצעה, בקשת מידע, וגם... מילה טובה</string>
+    <string name="message_object_contact_us">כותרת ההודעה</string>
+    <string name="message_contenu_contact_us"> טקסט ההערה</string>
+    <string name="emty_number_phone">הזן מספר הטלפון </string>
+    <string name="problem_connexion">קיימת בעיה בתקשורת</string>
+    <string name="max_numbers_phone">אפשר עד 3 מספרים</string>
+    <string name="years_single">שנה</string>
+    <string name="string_morning">בוקר</string>
+    <string name="choose_dates">נא לבחור ימי התראה</string>
+    <string name="days_of_alertes">נא לבחור ימי התראה </string>
+    <string name="add_name_kids">הזן שם</string>
+    <string name="add_age_kids">הזן גיל</string>
+    <string name="no_update_kids">לא היו שינויים</string>
+    <string name="add_name_kids_new">הזן את שם הילד</string>
+    <string name="fullname">שם מלא</string>
+    <string name="add_valid_info">נא להזין את הנתונים הנכונים</string>
+    <string name="add_password">הזן את הסיסמה</string>
+    <string name="add_username">הזן את שם המשתמש</string>
+    <string name="problem_info">נתונים שגויים</string>
+    <string name="no_update">לא היו שינויים</string>
+    <string name="add_full_name">הזן את השם המלא</string>
+    <string name="add_ville">הזן את העיר</string>
+    <string name="add_number_phone">הזן את מספר הטלפון שלך</string>
+    <string name="add_number_cars">הזן את סוג המכונית</string>
+    <string name="add_color_cars">הזן את צבע המכונית</string>
+    <string name="your_child">הילדים </string>
+    <string name="your_child_one">הילד </string>
+    <string name="geolocation_sms">קואורדינטות</string>
+    <string name="sous_temerature_sms">טמפרטורה</string>
+    <string name="risque_sms">בסכנה، בתוך מוכנית צבע</string>
+    <string name="type_voiture_sms">מסוג</string>
+    <string name="cars_number_sms">מספר</string>
+    <string name="please_see_him_sms">אנא בדוק את המכונית בהקדם</string>
+
+
+
+
+    <string name="Share">שתף</string>
+    <string name="alerte_choose_language_title">áçø ùôä</string>
+    <string name="arabia_lan">Arabic</string>
+    <string name="en_language">English</string>
+    <string name="is_language">hebrew</string>
+    <string name="skip">ãìâ</string>
+    <string name="choose_langue">áçø ùôä</string>
+    <string name="Send">ùìç</string>
+    <string name="Message">äåãòä</string>
+    <string name="object">ðåùà</string>
+    <string name="after">ìàçø</string>
+    <string name="min">ã÷åú</string>
+    <string name="Enable">ìÀàÇôùÑÅø</string>
+    <string name="Desable">ìñâåø</string>
+    <string name="valide_delete">äàí àúä øåöä ìîçå÷?</string>
+    <string name="First">øàùåï</string>
+    <string name="Second">ùðéä</string>
+    <string name="third">ùÑÀìÄéùÑÄé</string>
+    <string name="number">îñôø</string>
+    <string name="Phonenumbers">îñôøé èìôåï</string>
+    <string name="Setting">äâãøåú</string>
+
+    <string name="choose_your_contry_code">בחר קידומת המדינה שלך</string>
+    <string name="Sign_up">Sign up</string>
+    <string name="gps_in_setting">GPS הוא הגדרות</string>
+    <string name="gps_not_work">GPS אינה מופעלת. האם אתה רוצה ללכת לתפריט הגדרות?</string>
+    <string name="Settings">הגדרות</string>
+    <string name="repeat_after_setting">נסה שוב לאחר הפעלת GPS</string>
+
+
+    <string name="header_popup_choose_language">لغة التطبيق</string>
+    <string name="low_temperature">Low temperature .. safe your car.</string>
+    <string name="choose_kids"> Choose Kids</string>
+    <string name="to_plvae_sms">in</string>
+    <string name="text_about">تطبيق Safe Kids اول تطبيق عالمي مجاني بهدف انهاء ظاهرة نسيان الأطفال داخل المركبة ..   التطبيق مخصص لحمايه الأطفال من المخاطر على مدار الساعة لمنع نسيان اطفالنا داخل المركبة بامكانيات مميزه وذكيه ويحافظ على سلامة وامن اطفالكم بنسبه 99% في حال استخدام  التطبيق بشكل صحيح التطبيق  من برمجه وتطوير المهندس احمد بطو ويتميز بالخصائص التاليه  1 - نظام ذكي لحمايه أطفالك على مدار 24 ساعه ولا يحتاج اي جهاز اضافي داخل السياره   2 - تطبيق safe kids الذكي  يعلم  بشكل تلقائي  في حال توقف المركبة الخاصة بكم ويرسل تنبيه \" أنا طفلكم معكم \"  و يمكن ايضا اختيار إمكانية تحديد وقت للعودة الى المركبة بعد دقائق ويقوم في تنبيهكم بعد انتهاء الوقت .  3 - في حال نسيان الطفل داخل المركبة يقوم التطبيق بالاتصال بشكل تلقائي لهاتف الان لكي تعود الى المركبة وان لم يتلقى رد من الام ،  في هذه الحاله يقوم التطبيق بارسال رساله بخريطة المكان التي توقفت فيه المركبة ونوعها رقمها ولونها الى \" ارقام الطوارئ \" المسجله في التطبيق ومعلومات اضافية عن درجه الحرارة والرطوبة في ذلك الوقت ليتم انقاذ الطفل من خطر محتم .  4 - تطبيق سيف كيديز يتابع تحركاتكم اثناء تنقلكم في المركبة ويرسل انذار اذا كان هناك عائق يشكل خطر على حياتكم وحياة اطفالكم   مثل : تشويشات الشارع و حيوانات في الطريق قبل كم من مكان تواجدهم  5 - تطبيق سيف كيديز الذكي  يتابع سرعة المركبة الخاصه بكم في حال تجاوزتم السرعه القانونيه يقوم بإرسال تنبيه لتخفيض السرعه والحفاظ على امنكم وحياة اطفالكم .   6- تطبيق سيف كيديز يتمتع بخاصية(Safe Kids Near)  في حال نسيان الطفل داخل المركبة ولا يوجد رد من الأهل وايضاً من ارقام الطوارئ يقوم بالارسال لأقرب شخص في المنطقة لإنقاذ حياه الطفل .  7 -في كل حساب في التطبيق  نظام لضبط المواعيد لكل طفل داخل ملفه الشخصي وتسجيل مكان تواجدهم اخر مره كي لا تنساهم داخل المركبة .</string>
+    <string name="text_notice">التعليمات وشروط الاستخدام لتطبيق Safe Kids  1 - تسجيل البيانات الصحيحه  الاسم الكامل  ، البلدة ، رقم الهاتف ، رقم السياره نوعها ولونها لكي يتم عمل التطبيق  بشكل صحيح لحماية الطفل  2 يجب كتابه ارقام الطوارى بشكل صحيح حتى يتم التواصل معهم في حال فقدان الاتصال مع الام ليتم انقاذ الطفل .  3 - عدم ضبط واستعمال التطبيق اثناء القياده .  4 - نحن غير مسؤولين عن اي ضرر يحدث لكم في حال توقف عمل التطبيق أو في حالة حدوث اَي خلل تقني   5 -  نحن غير مسؤولين في حال ضبط التطبيق بشكل غير صحيح .  6 - لا نستخدم بيناتكم لأمور تسويقية فقط من اجل تطوير التطبيق . نحن نريد فقط الحفاظ على امن وسلامة اطفالكم وجميع بيناتكم الخاصه مشفرة .  7 - نستخدم معلومات ال Gbs الخاصه بكم فقط لتحديد عنوان الطفل المفقود وتحديد السرعه وليس لدينا اي استعمال او نوايا  اخرى .  8 - استعمال  التطبيق لا يمنع مثل هذه الحوادث بل يقلل من حدوثها لذلك يجب عليكم اتخاذ جميع احتياطاتكم .  9 التطبيق مخصص من اجل مساعدة الأهل فقط ، لذلك لا تقع اَي مسوليه على مبرمج التطبيق وتقع المسؤليه عليكم فقط واستعمالك لتطبيق هو يعني موافقتك لشروط الاستخدام والتعليمات ..  وشكرا</string>
+    <string name="thereare_child_sms">ילד</string>
+    <string name="carmessage">יש תינוק בסיכון בתוך האוטו הקרובה ממך ,האם אתה רוצה להציל אותו לפני שיחנק</string>
+
+
+</resources>

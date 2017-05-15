@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgKids"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="false"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:border_color="#fff"
+        app:border_width="1dp" />
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@+id/imgKids">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ياسمين احمد  عبد الرحمن"
+                android:textSize="@dimen/text_normal_size"
+                android:textColor="@color/colorPrimary"
+                android:gravity="left"
+                android:layout_toLeftOf="@+id/txtRetard"
+                android:paddingLeft="8dp" />
+
+            <TextView
+                android:id="@+id/txtRetard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="after 5min"
+                android:textSize="@dimen/text_small_medium_size"
+                android:textColor="@color/colorBlack"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:paddingLeft="8dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_calender_red"
+                android:layout_marginRight="4dp" />
+
+            <TextView
+                android:id="@+id/txtAge"
+                android:layout_width="82dp"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/imgKids"
+                android:text="4 سنوات"
+                android:textSize="@dimen/text_normal_size"
+                android:textColor="@color/colorRed"
+                android:padding="4dp"
+                android:gravity="left" />
+
+            <ImageView
+                android:id="@+id/imgState"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_state_disable"/>
+
+            <TextView
+                android:id="@+id/txtState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/imgKids"
+                android:text="غير فعال"
+                android:textSize="@dimen/text_normal_size"
+                android:textColor="@color/colorRed"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/txtdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small_size"
+                android:layout_gravity="right|center_vertical"
+                android:textColor="@color/colorGray"
+                android:gravity="right"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="8dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_toRightOf="@+id/imgKids"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorGrayLight" />
+
+</RelativeLayout>

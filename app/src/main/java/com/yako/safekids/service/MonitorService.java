@@ -313,9 +313,13 @@ public class MonitorService extends Service {
                         e.printStackTrace();
                     }
                     sendTextMessage("Safe kids", phoneNo, message);//messageForAlerte
-                    String messageAlerte = getResources().getString(R.string.thereare_child_sms)+" "+getResources().getString(R.string.risque_sms) + carColor + ""+getResources().getString(R.string.type_voiture_sms) + carType + ""+getResources().getString(R.string.cars_number_sms) + carNum + location + geo + temp + ""+
-                            getResources().getString(R.string.please_see_him_sms)+System.getProperty("line.separator")+"#Safe Kids";
-                    editor.putString("messageForAlerte",messageAlerte).commit();
+                    String messagealerte = getResources().getString(R.string.carmessage)+"\n"+
+                            getResources().getString(R.string.car_type)+": "+carType+"\n"+
+                            getResources().getString(R.string.cart_color)+": "+carColor+"\n"+
+                            getResources().getString(R.string.car_number)+": "+carNum;
+                    //String messageAlerte = getResources().getString(R.string.thereare_child_sms)+" "+getResources().getString(R.string.risque_sms) + carColor + ""+getResources().getString(R.string.type_voiture_sms) + carType + ""+getResources().getString(R.string.cars_number_sms) + carNum + location + geo + temp + ""+
+                            //getResources().getString(R.string.please_see_him_sms)+System.getProperty("line.separator")+"#Safe Kids";
+                    editor.putString("messageForAlerte",messagealerte).commit();
 
                 }
 

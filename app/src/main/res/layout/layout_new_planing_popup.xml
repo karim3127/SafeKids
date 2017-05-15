@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_popup_choose_kids"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="right">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="ضبط وقت التنبيه"
+            android:textColor="@color/colorPrimary"
+            android:background="#22dedede"
+            android:textSize="@dimen/text_medium_size"
+            android:gravity="center_vertical|right"
+            android:layout_marginBottom="8dp"
+            android:paddingRight="24dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgUpH"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/ic_arrow_up_blue"
+                    android:padding="4dp" />
+
+
+                <TextSwitcher
+                    android:id="@+id/txtSwitcherH"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:inAnimation="@anim/anim_txt_switcher_in"
+                    android:outAnimation="@anim/anim_txt_switcher_out"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="00"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_intro_large_size"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="08"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_intro_large_size"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp" />
+
+                </TextSwitcher>
+
+
+                <ImageView
+                    android:id="@+id/imgDownH"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/ic_arrow_down_blue"
+                    android:padding="4dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=":"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_intro_large_size"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" />
+
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgUpM"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/ic_arrow_up_blue"
+                    android:padding="4dp" />
+
+
+                <TextSwitcher
+                    android:id="@+id/txtSwitcherM"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:inAnimation="@anim/anim_txt_switcher_in"
+                    android:outAnimation="@anim/anim_txt_switcher_out"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="00"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_intro_large_size"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="16"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_intro_large_size"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp" />
+
+                </TextSwitcher>
+
+
+                <ImageView
+                    android:id="@+id/imgDownM"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/ic_arrow_down_blue"
+                    android:padding="4dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgUpD"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/ic_arrow_up_blue"
+                    android:padding="4dp" />
+
+
+                <TextSwitcher
+                    android:id="@+id/txtSwitcherD"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:inAnimation="@anim/anim_txt_switcher_in"
+                    android:outAnimation="@anim/anim_txt_switcher_out"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="صباح"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_intro_large_size"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="مساء"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_intro_large_size"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp" />
+
+                </TextSwitcher>
+
+
+                <ImageView
+                    android:id="@+id/imgDownD"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/ic_arrow_down_blue"
+                    android:padding="4dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/txtDay"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+
+            <TextView
+                android:id="@+id/txtJ1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small_size"
+                android:textColor="@color/color_day_state"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:gravity="center"
+                android:layout_marginLeft="1dp"
+                android:background="@drawable/back_day_state"
+                android:layout_weight="1"
+                android:text="سبت" />
+
+            <TextView
+                android:id="@+id/txtJ2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small_size"
+                android:textColor="@color/color_day_state"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:gravity="center"
+                android:layout_marginLeft="1dp"
+                android:background="@drawable/back_day_state"
+                android:layout_weight="1"
+                android:text="جمعة" />
+
+            <TextView
+                android:id="@+id/txtJ3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small_size"
+                android:textColor="@color/color_day_state"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:gravity="center"
+                android:layout_marginLeft="1dp"
+                android:background="@drawable/back_day_state"
+                android:layout_weight="1"
+                android:text="خميس" />
+
+            <TextView
+                android:id="@+id/txtJ4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small_size"
+                android:textColor="@color/color_day_state"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:gravity="center"
+                android:layout_marginLeft="1dp"
+                android:background="@drawable/back_day_state"
+                android:layout_weight="1"
+                android:text="إربعاء" />
+
+            <TextView
+                android:id="@+id/txtJ5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small_size"
+                android:textColor="@color/color_day_state"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:gravity="center"
+                android:layout_marginLeft="1dp"
+                android:background="@drawable/back_day_state"
+                android:layout_weight="1"
+                android:text="ثلاثاء" />
+
+            <TextView
+                android:id="@+id/txtJ6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small_size"
+                android:textColor="@color/color_day_state"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:gravity="center"
+                android:layout_marginLeft="1dp"
+                android:background="@drawable/back_day_state"
+                android:layout_weight="1"
+                android:text="إثنين" />
+
+            <TextView
+                android:id="@+id/txtJ7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="أحد"
+                android:textSize="@dimen/text_small_size"
+                android:textColor="@color/color_day_state"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:gravity="center"
+                android:layout_marginLeft="1dp"
+                android:background="@drawable/back_day_state"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txtAuto"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="تذكير تلقائي"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/text_small_medium_size"
+                android:gravity="center_vertical|right"
+                android:layout_marginRight="8dp"
+                android:paddingLeft="8dp"
+                android:layout_marginLeft="12dp" />
+
+            <com.rey.material.widget.CheckBox
+                android:id="@+id/check_auto"
+                style="@style/Material.Drawable.CheckBox"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="16dp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtCheckAll"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:text="تحديد كل الأيام"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/text_small_medium_size"
+                android:gravity="center_vertical|right"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1" />
+
+            <com.rey.material.widget.CheckBox
+                android:id="@+id/check_day"
+                style="@style/Material.Drawable.CheckBox"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text=""
+                android:layout_marginRight="8dp" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_texto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="نص التنبيه"
+            android:textSize="@dimen/text_small_medium_size"
+            android:lines="2"
+            android:background="@drawable/back_rounded_semi_trans"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:maxLength="50" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/txtCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="إلغاء"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/text_medium_size"
+                android:gravity="center_vertical|right"
+                android:layout_marginRight="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp" />
+
+            <TextView
+                android:id="@+id/txtValide"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="موافق"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_medium_size"
+                android:gravity="center_vertical|right"
+                android:layout_marginRight="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,137 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginBottom="1dp"
+        android:elevation="1dp"
+        android:background="@drawable/bg_day">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/ic_time_gray" />
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="10:15"
+            android:textSize="@dimen/text_intro_normal_size"
+            android:textColor="#fff"
+            android:gravity="right"
+            android:layout_marginRight="4dp" />
+
+        <TextView
+            android:id="@+id/txtDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="م"
+            android:textSize="@dimen/text_normal_size"
+            android:textColor="#fff"
+            android:paddingTop="8dp"
+            android:layout_marginRight="4dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/txtTime"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/txtDay"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="6dp">
+
+            <TextView
+                android:id="@+id/txtJ1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small_size"
+                android:textColor="#6fff"
+                android:paddingTop="8dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="سبت" />
+
+            <TextView
+                android:id="@+id/txtJ2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small_size"
+                android:textColor="#6fff"
+                android:paddingTop="8dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="جمعة" />
+
+            <TextView
+                android:id="@+id/txtJ3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small_size"
+                android:textColor="#6fff"
+                android:paddingTop="8dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="خميس" />
+
+            <TextView
+                android:id="@+id/txtJ4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small_size"
+                android:textColor="#6fff"
+                android:paddingTop="8dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="إربعاء" />
+
+            <TextView
+                android:id="@+id/txtJ5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small_size"
+                android:textColor="#6fff"
+                android:paddingTop="8dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="ثلاثاء" />
+
+            <TextView
+                android:id="@+id/txtJ6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small_size"
+                android:textColor="#6fff"
+                android:paddingTop="8dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="إثنين" />
+
+            <TextView
+                android:id="@+id/txtJ7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small_size"
+                android:textColor="#6fff"
+                android:paddingTop="8dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="أحد" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

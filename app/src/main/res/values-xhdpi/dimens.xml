@@ -1,0 +1,15 @@
+<resources>
+
+    <dimen name="text_normal_size">16sp</dimen>
+    <dimen name="text_large_size">20sp</dimen>
+    <dimen name="text_medium_size">18sp</dimen>
+    <dimen name="text_small_medium_size">14sp</dimen>
+    <dimen name="text_small_size">11sp</dimen>
+
+    <dimen name="text_intro_normal_size">22sp</dimen>
+    <dimen name="text_intro_large_size">26sp</dimen>
+
+    <integer name="app_bar_text_size">16</integer>
+
+    <integer name="option_menu_text_size">18</integer>
+</resources>

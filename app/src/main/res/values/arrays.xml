@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="titles">
+        <item>@string/Contact</item>
+        <item>@string/Contact</item>
+        <item>@string/Contact</item>
+    </string-array>
+
+    <array name="icons">
+        <item>@drawable/screen1</item>
+        <item>@drawable/screen2</item>
+        <item>@drawable/screen3</item>
+        <item>@drawable/screen4</item>
+        <item>@drawable/screen5</item>
+    </array>
+
+    <string-array name="texts_view_pager" >
+        <item>@string/slid_intro_desc_0</item>
+        <item>@string/slid_intro_desc_1</item>
+        <item>@string/slid_intro_desc_2</item>
+        <item>@string/slid_intro_desc_3</item>
+        <item>@string/slid_intro_desc_4</item>
+    </string-array>
+
+    <string name="Contact">Contact</string>
+</resources>

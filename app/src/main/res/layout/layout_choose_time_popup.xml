@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_popup_choose_kids"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="right">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="وقت التنبيه"
+            android:textColor="@color/colorPrimary"
+            android:background="#22dedede"
+            android:textSize="@dimen/text_medium_size"
+            android:gravity="center_vertical|right"
+            android:layout_marginBottom="8dp"
+            android:paddingRight="24dp" />
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="24dp">
+
+            <LinearLayout
+                android:id="@+id/radios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="false"
+                android:layout_gravity="right"
+                android:orientation="vertical"
+                android:gravity="right"
+                android:layout_alignParentRight="true">
+
+                <com.rey.material.widget.RadioButton
+                    style="@style/Material.Drawable.RadioButton"
+                    android:id="@+id/rb1"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical|right"
+                    android:text="5 دقائق"
+                    android:textSize="@dimen/text_medium_size"
+                    android:layout_gravity="right"
+                    app:rbd_strokeColor="@color/radio_color_state_list"
+                    android:checked="true"
+                    android:layout_marginLeft="36dp"
+                    android:paddingRight="72dp" />
+
+                <com.rey.material.widget.RadioButton
+                    style="@style/Material.Drawable.RadioButton"
+                    android:id="@+id/rb2"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/rb1"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center_vertical|right"
+                    android:text="10 دقائق"
+                    android:textSize="@dimen/text_medium_size"
+                    app:rbd_strokeColor="@color/radio_color_state_list"
+                    android:layout_marginLeft="36dp"
+                    android:paddingRight="72dp" />
+
+                <com.rey.material.widget.RadioButton
+                    style="@style/Material.Drawable.RadioButton"
+                    android:id="@+id/rb3"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/rb2"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center_vertical|right"
+                    android:text="15 دقيقة"
+                    android:textSize="@dimen/text_medium_size"
+                    app:rbd_strokeColor="@color/radio_color_state_list"
+                    android:layout_marginLeft="36dp"
+                    android:paddingRight="72dp" />
+
+                <com.rey.material.widget.RadioButton
+                    style="@style/Material.Drawable.RadioButton"
+                    android:id="@+id/rb4"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/rb3"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center_vertical|right"
+                    android:text="20 دقيقة"
+                    android:textSize="@dimen/text_medium_size"
+                    app:rbd_strokeColor="@color/radio_color_state_list"
+                    android:layout_marginLeft="36dp"
+                    android:paddingRight="72dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="false"
+                android:layout_gravity="right"
+                android:orientation="vertical"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_time"
+                    android:padding="2dp" />
+
+                <ImageView
+                    android:layout_marginTop="18dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_time"
+                    android:padding="2dp" />
+
+                <ImageView
+                    android:layout_marginTop="18dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_time"
+                    android:padding="2dp" />
+
+                <ImageView
+                    android:layout_marginTop="18dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_time"
+                    android:padding="2dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/txtCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="إلغاء"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/text_medium_size"
+                android:gravity="center_vertical|right"
+                android:layout_marginRight="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp" />
+
+            <TextView
+                android:id="@+id/txtValide"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="موافق"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_medium_size"
+                android:gravity="center_vertical|right"
+                android:layout_marginRight="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBlock"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#6fff"
+        android:visibility="gone">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:background="#fff"
+            app:indicator="BallPulse"
+            app:indicator_color="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

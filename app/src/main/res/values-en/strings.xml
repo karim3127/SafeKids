@@ -1,0 +1,242 @@
+<resources>
+
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+
+    <string name="time_today">Today</string>
+    <string name="time_yesterday">Yesterday</string>
+
+    <string-array name="time_days_of_week">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+
+    <string name="Sun">Sunday</string>
+    <string name="Mon">Monday</string>
+    <string name="Tues">Tuesday</string>
+    <string name="Wed">Wednesday</string>
+    <string name="Thurs">Thursday</string>
+    <string name="Fri">Friday</string>
+    <string name="Sat">Saturday</string>
+
+    <string name="slid_intro_desc_0">A smart system to protect your kids all the time.</string>
+    <string name="slid_intro_desc_1">Since now on you won\'t forget your children inside your cars thanks to Safe Kids application.</string>
+    <string name="slid_intro_desc_3">The system of adjusting the appointments of each kid and list the last place they were at so you won\'t forget your children at your cars.</string>
+    <string name="slid_intro_desc_4">A system automatically works during your driving all the time to save your kids from inevitable danger.</string>
+    <string name="slid_intro_desc_2">In case of forgetting the child in the car and the application does not receive a reply from the parent,the application automatically calls the emergency numbers and if none of the numbers reply the application starts to look for the nearest person to the location of the car and text him in order to save the child who is locked inside the car.</string>
+
+    <string name="waiting_for_fix">Waiting for gps fix …</string>
+    <string name="gps_disabled">Gps disabled</string>
+    <string name="please_enable_gps">In order to use this app you need the gps to be enabled.</string>
+
+    <string name="open_weather_maps_app_id">11111</string>
+
+    <string name="app_name">Safe Kids</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="title_activity_sign_up">SignUp</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_profil_setting">ProfilSettings</string>
+    <string name="title_activity_about">About</string>
+    <string name="title_activity_help">Help</string>
+    <string name="title_activity_call_us">CallUs</string>
+    <string name="title_activity_notice">Notice</string>
+    <string name="title_activity_phone_number">Emergency numbers</string>
+    <string name="title_activity_notification">Notification</string>
+    <string name="title_activity_new_kids">NewKids</string>
+    <string name="title_activity_kids_details">KidsDetails</string>
+    <string name="title_activity_kids_other_details">KidsOtherDetails</string>
+    <string name="title_activity_kids_planing">KidsPlaning</string>
+    <string name="title_activity_kids_edit">KidsEdit</string>
+    <string name="title_activity_kids_list">KidsList</string>
+    <string name="title_activity_profil_update">ProfilUpdate</string>
+    <string name="title_activity_first_alert">FirstAlert</string>
+    <string name="title_activity_normal_alert">NormalAlert</string>
+    <string name="title_activity_intro_slider">IntroSlider</string>
+
+
+    <string name="text_header_contact_us">Leave us a message about a problem or suggestion</string>
+    <string name="message_object_contact_us">Write the message title</string>
+    <string name="message_contenu_contact_us">Write the message text</string>
+    <string name="speed_button_to_replay_en">Recall after 15 minutes</string>
+    <string name="message_speed_en">Exceeded the usual speed</string>
+    <string name="age_normal_alerte">Age:</string>
+    <string name="nombre_years_normal_alert">years</string>
+    <string name="one_year_normal_alert">year</string>
+    <string name="first_alerte_Humidity">Humidity</string>
+    <string name="first_alerte_Temperature">Temperature</string>
+    <string name="first_alerte_Timeout">Time out</string>
+    <string name="first_alerte_Coordinates">Coordinates</string>
+    <string name="first_alerte_Location">Location</string>
+    <string name="first_alerte_Delete_alert">Delete alert</string>
+    <string name="first_alerte_Dismiss">Dismiss</string>
+    <string name="back_alerte_coordinates">coordinates</string>
+    <string name="back_alerte_Informations">Informations</string>
+    <string name="alerte_stop_text">If you stopped your car!! Do you need to activate the smart warning to protect your kid so you won\'t forget him at the car?!</string>
+    <string name="alerte_red_text">Are you back to car !!</string>
+    <string name="alerte_red_text_notif">You have a problem </string>
+    <string name="alerte_stop_cancel">Cancel</string>
+    <string name="alerte_red_cancel">No</string>
+    <string name="alerte_red_valide">Yes</string>
+    <string name="alerte_not_cancel">I don\'t want</string>
+    <string name="alerte_stop_Valid">Go now</string>
+    <string name="numbers_phone_header">Please add here emergency numbers to contact them in case you forgot the child in the car</string>
+    <string name="emty_number_phone">Enter the phone number</string>
+    <string name="problem_connexion">connection problem</string>
+    <string name="max_numbers_phone">maximum phone numbers 3</string>
+    <string name="no_alerte">No alerts</string>
+    <string name="one_alerte">alert</string>
+    <string name="nombre_alertes">alerts</string>
+    <string name="confirme_delete_kids">Would you like to delete ?</string>
+    <string name="Valid_delete_kids">Ok</string>
+    <string name="Cancel_delete_kids">Cancel</string>
+    <string name="annee">Year</string>
+    <string name="two_yers">Two years</string>
+    <string name="years">Years</string>
+    <string name="years_single">Year</string>
+    <string name="Planing">Planing</string>
+    <string name="Alert_state">Alert state</string>
+    <string name="age_kids_detail">Age:</string>
+    <string name="No_alerts">No alerts</string>
+    <string name="string_morning">morning</string>
+    <string name="day">Day</string>
+    <string name="choose_dates">Select days lookout</string>
+    <string name="Night">Night</string>
+    <string name="Modify">Modify</string>
+    <string name="days_of_alertes">Select days lookout</string>
+    <string name="Delete">Delete</string>
+    <string name="Alert_Planing">Alert Planing</string>
+    <string name="Kids">Kids</string>
+    <string name="add_name_kids">Enter the name</string>
+    <string name="add_age_kids">Enter the age</string>
+    <string name="no_update_kids">No changes</string>
+    <string name="Use_camera">Use camera</string>
+    <string name="Choose_from_gallery">Choose from gallery</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Valid">Ok</string>
+    <string name="kids_name">"Kid's name"</string>
+    <string name="kids_age">"Kid's age"</string>
+    <string name="Add_new_kid">Add new kid</string>
+    <string name="female">female</string>
+    <string name="male">male</string>
+    <string name="add_name_kids_new">Enter the name of the child</string>
+    <string name="Ful_name">Full name</string>
+    <string name="Login">Login</string>
+    <string name="Password">Password</string>
+    <string name="City">City</string>
+    <string name="Phone_number">Phone number</string>
+    <string name="car_type">Car type</string>
+    <string name="cart_color">Car color</string>
+    <string name="car_number">Car number</string>
+    <string name="sign_up">Sign up</string>
+    <string name="Profil">Profil</string>
+    <string name="fullname">full name</string>
+    <string name="Notifications">Notifications</string>
+    <string name="Notice">Notice</string>
+    <string name="About_us">About us</string>
+    <string name="Need_help">Need help</string>
+    <string name="kids_number">kids number:</string>
+    <string name="Sign_in">Sign in</string>
+    <string name="Forget_password">Forget password</string>
+    <string name="new_account">"You don't have account? sign up?"</string>
+    <string name="number_kids">Kids number:</string>
+    <string name="list_of_kids">List of kids</string>
+    <string name="phone_numbers">Emergency numbers</string>
+    <string name="settings">Settings</string>
+    <string name="Contact_us">Contact us</string>
+    <string name="Share">Share</string>
+    <string name="Logout">Logout</string>
+    <string name="add_valid_info">Please enter the correct information</string>
+    <string name="add_password">Enter Password</string>
+    <string name="add_username">Enter your user name </string>
+    <string name="problem_info">incorrect information</string>
+    <string name="no_update">No changes</string>
+    <string name="add_full_name">Enter the full name</string>
+    <string name="add_ville">Enter your city</string>
+    <string name="add_number_phone">Enter the phone number</string>
+    <string name="add_number_cars">Enter the type of car</string>
+    <string name="add_color_cars">Enter the color of the car</string>
+    <string name="add_user_name">Enter your user name</string>
+    <string name="add_password_new">Enter Password</string>
+    <string name="add_new_kids">Add new kids</string>
+    <string name="Add_phone_number">Add phone number</string>
+    <string name="savekids">Safe kids</string>
+    <string name="delete_alerte">Delete alert</string>
+    <string name="alerte_oxygene">Lack of oxygen .. safe your car.</string>
+    <string name="speeding">Speeding .. safe your car.</string>
+    <string name="followus">Follow us</string>
+    <string name="kids">Kids</string>
+    <string name="info_personnel">Informations</string>
+    <string name="Select_all">Select all</string>
+    <string name="Choose_kids">Choose kids</string>
+    <string name="twenty_munite">20 minutes</string>
+    <string name="fivten_munites">15 minutes</string>
+    <string name="ten_munite">10 minutes</string>
+    <string name="five_munite">5 minutes</string>
+    <string name="alerte_date">Alert date</string>
+    <string name="your_child">Your childs</string>
+    <string name="your_child_one">Your baby</string>
+    <string name="geolocation_sms">coordinates</string>
+    <string name="sous_temerature_sms">under the temperature</string>
+    <string name="risque_sms">is in danger, it is in the car color</string>
+    <string name="type_voiture_sms">Type </string>
+    <string name="cars_number_sms">Number</string>
+    <string name="please_see_him_sms">Please inspected as soon as</string>
+    <string name="alerte_choose_language_title">Choose Language</string><!-- -->
+    <string name="arabia_lan">Arabic</string>
+    <string name="en_language">English</string>
+    <string name="is_language">Hebrew</string>
+    <string name="skip">Skip</string>
+    <string name="choose_langue">Choose Language</string>
+    <string name="Send">Send</string>
+    <string name="Message">Message</string>
+    <string name="object">object</string>
+    <string name="after">after</string>
+    <string name="min">min</string>
+    <string name="Enable">Enable</string>
+    <string name="Desable">Desable</string>
+    <string name="valide_delete">Would you like to delete ?</string>
+    <string name="First">First</string>
+    <string name="Second">Second</string>
+    <string name="third">third</string>
+    <string name="number">number</string>
+    <string name="Phonenumbers">Emergency numbers</string>
+    <string name="Setting">Settings</string>
+    <string name="text_share">Share text...</string>
+    <string name="Details">Details</string>
+    <string name="fix_time">Fix alert time</string>
+    <string name="check_all_day">Check all days</string>
+    <string name="Auto_alert">Auto alert</string>
+    <string name="text_alerte">Text alert</string>
+    <string name="Delete_kid">Delete kid</string>
+    <string name="delete_number">delete number</string>
+    <string name="max_speed">Maximum speed is greater than 50</string>
+    <string name="enter_max_temp">Enter the maximum temperature</string>
+    <string name="Speed_alert">Speed alert</string>
+    <string name="Planing_alert">Planing alert</string>
+    <string name="Planing_nearby">Alert nearby</string>
+    <string name="Alert_popup_on_exit">Alert popup on exit</string>
+    <string name="Max_Speed">Max Speed</string>
+    <string name="Max_Temperature">Max Temperature</string>
+    <string name="choose_your_contry_code">Choose your country code</string>
+    <string name="Sign_up">Sign up</string>
+    <string name="gps_in_setting">GPS is settings</string>
+    <string name="gps_not_work">GPS is not enabled. Do you want to go to settings menu?</string>
+    <string name="Settings">Settings</string>
+    <string name="repeat_after_setting">Retry after activating GPS</string>
+
+    <string name="header_popup_choose_language">لغة التطبيق</string>
+    <string name="low_temperature">Low temperature .. safe your car.</string>
+    <string name="choose_kids"> Choose Kids</string>
+    <string name="to_plvae_sms">in</string>
+    <string name="text_about">تطبيق Safe Kids اول تطبيق عالمي مجاني بهدف انهاء ظاهرة نسيان الأطفال داخل المركبة ..   التطبيق مخصص لحمايه الأطفال من المخاطر على مدار الساعة لمنع نسيان اطفالنا داخل المركبة بامكانيات مميزه وذكيه ويحافظ على سلامة وامن اطفالكم بنسبه 99% في حال استخدام  التطبيق بشكل صحيح التطبيق  من برمجه وتطوير المهندس احمد بطو ويتميز بالخصائص التاليه  1 - نظام ذكي لحمايه أطفالك على مدار 24 ساعه ولا يحتاج اي جهاز اضافي داخل السياره   2 - تطبيق safe kids الذكي  يعلم  بشكل تلقائي  في حال توقف المركبة الخاصة بكم ويرسل تنبيه \" أنا طفلكم معكم \"  و يمكن ايضا اختيار إمكانية تحديد وقت للعودة الى المركبة بعد دقائق ويقوم في تنبيهكم بعد انتهاء الوقت .  3 - في حال نسيان الطفل داخل المركبة يقوم التطبيق بالاتصال بشكل تلقائي لهاتف الان لكي تعود الى المركبة وان لم يتلقى رد من الام ،  في هذه الحاله يقوم التطبيق بارسال رساله بخريطة المكان التي توقفت فيه المركبة ونوعها رقمها ولونها الى \" ارقام الطوارئ \" المسجله في التطبيق ومعلومات اضافية عن درجه الحرارة والرطوبة في ذلك الوقت ليتم انقاذ الطفل من خطر محتم .  4 - تطبيق سيف كيديز يتابع تحركاتكم اثناء تنقلكم في المركبة ويرسل انذار اذا كان هناك عائق يشكل خطر على حياتكم وحياة اطفالكم   مثل : تشويشات الشارع و حيوانات في الطريق قبل كم من مكان تواجدهم  5 - تطبيق سيف كيديز الذكي  يتابع سرعة المركبة الخاصه بكم في حال تجاوزتم السرعه القانونيه يقوم بإرسال تنبيه لتخفيض السرعه والحفاظ على امنكم وحياة اطفالكم .   6- تطبيق سيف كيديز يتمتع بخاصية(Safe Kids Near)  في حال نسيان الطفل داخل المركبة ولا يوجد رد من الأهل وايضاً من ارقام الطوارئ يقوم بالارسال لأقرب شخص في المنطقة لإنقاذ حياه الطفل .  7 -في كل حساب في التطبيق  نظام لضبط المواعيد لكل طفل داخل ملفه الشخصي وتسجيل مكان تواجدهم اخر مره كي لا تنساهم داخل المركبة .</string>
+    <string name="text_notice">التعليمات وشروط الاستخدام لتطبيق Safe Kids  1 - تسجيل البيانات الصحيحه  الاسم الكامل  ، البلدة ، رقم الهاتف ، رقم السياره نوعها ولونها لكي يتم عمل التطبيق  بشكل صحيح لحماية الطفل  2 يجب كتابه ارقام الطوارى بشكل صحيح حتى يتم التواصل معهم في حال فقدان الاتصال مع الام ليتم انقاذ الطفل .  3 - عدم ضبط واستعمال التطبيق اثناء القياده .  4 - نحن غير مسؤولين عن اي ضرر يحدث لكم في حال توقف عمل التطبيق أو في حالة حدوث اَي خلل تقني   5 -  نحن غير مسؤولين في حال ضبط التطبيق بشكل غير صحيح .  6 - لا نستخدم بيناتكم لأمور تسويقية فقط من اجل تطوير التطبيق . نحن نريد فقط الحفاظ على امن وسلامة اطفالكم وجميع بيناتكم الخاصه مشفرة .  7 - نستخدم معلومات ال Gbs الخاصه بكم فقط لتحديد عنوان الطفل المفقود وتحديد السرعه وليس لدينا اي استعمال او نوايا  اخرى .  8 - استعمال  التطبيق لا يمنع مثل هذه الحوادث بل يقلل من حدوثها لذلك يجب عليكم اتخاذ جميع احتياطاتكم .  9 التطبيق مخصص من اجل مساعدة الأهل فقط ، لذلك لا تقع اَي مسوليه على مبرمج التطبيق وتقع المسؤليه عليكم فقط واستعمالك لتطبيق هو يعني موافقتك لشروط الاستخدام والتعليمات ..  وشكرا</string>
+    <string name="thereare_child_sms">A child</string>
+    <string name="carmessage">In the car is near you  There is  a child choking  Are you want to help him life</string>
+
+
+</resources>

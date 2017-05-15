@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_popup_choose_kids"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="right">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/Choose_kids"
+            android:textColor="@color/colorPrimary"
+            android:background="#22dedede"
+            android:textSize="@dimen/text_medium_size"
+            android:gravity="left|center_vertical"
+            android:layout_marginBottom="8dp"
+            android:paddingLeft="24dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvListKids"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp">
+
+            <com.rey.material.widget.CheckBox
+                android:id="@+id/checkAll"
+                style="@style/Material.Drawable.CheckBox"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text=""
+                android:layout_marginLeft="16dp" />
+
+            <TextView
+                android:id="@+id/txtCheckAll"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="@string/Select_all"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/text_medium_size"
+                android:gravity="center_vertical"
+                android:layout_marginRight="8dp"
+                android:paddingRight="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/txtCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="@string/Cancel"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/text_medium_size"
+                android:gravity="center_vertical|right"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_marginLeft="8dp" />
+
+            <TextView
+                android:id="@+id/txtValide"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="@string/Valid"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_medium_size"
+                android:gravity="center_vertical|right"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_marginLeft="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

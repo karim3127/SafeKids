@@ -1,0 +1,41 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgKids"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="1dip"
+        android:layout_margin="1dp" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="جمعة"
+        android:textSize="@dimen/text_small_size"
+        android:textColor="#fff"
+        android:background="#662076bb"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_alignParentBottom="true"
+        android:lines="1"
+        android:ellipsize="end" />
+
+    <View
+        android:id="@+id/state"
+        android:elevation="1dp"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:background="@drawable/circle_green"
+        android:layout_margin="8dp" />
+
+</RelativeLayout>

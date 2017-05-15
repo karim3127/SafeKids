@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/txtHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:padding="16dp"
+        android:text="@string/choose_your_contry_code"
+        android:textSize="@dimen/text_normal_size"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentRight="true" />
+
+    <View
+        android:id="@+id/viewSeparator1"
+        android:layout_below="@+id/txtHeader"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#5000"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/viewSeparator1"
+        android:id="@+id/rvListCc"
+        android:scrollbars="vertical"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
