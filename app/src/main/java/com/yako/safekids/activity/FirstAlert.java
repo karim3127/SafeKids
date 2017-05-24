@@ -110,6 +110,7 @@ public class FirstAlert extends AppCompatActivity {
             alertModel = gson.fromJson(json, AlertModel.class);
 
         if (alertModel != null) {
+
             PowerManager.WakeLock screenLock = ((PowerManager)getSystemService(POWER_SERVICE)).newWakeLock(
                     PowerManager.SCREEN_BRIGHT_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP, "TAG");
             screenLock.acquire();
@@ -118,6 +119,7 @@ public class FirstAlert extends AppCompatActivity {
             wind.addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
             wind.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
             wind.addFlags(WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+            wind.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
             Uri sound;
             switch (langage) {
@@ -144,6 +146,7 @@ public class FirstAlert extends AppCompatActivity {
             try {
                 thePlayer.start();
             }catch (Exception ignored){}
+
             Handler handler = new Handler();
             Runnable r = new Runnable() {
                 @Override
@@ -155,6 +158,7 @@ public class FirstAlert extends AppCompatActivity {
                 }
             };
             handler.postDelayed(r, 1000 * 10);
+
             /*final Handler handler2 = new Handler();
             final Runnable r2 = new Runnable() {
                 @Override
@@ -218,6 +222,7 @@ public class FirstAlert extends AppCompatActivity {
             handler.postDelayed(r,500);*/
 
             if (alertModel.getListKids().get(0).getPhoto() != null && !alertModel.getListKids().get(0).equals("")) {
+
                 ImageLoader.getInstance().loadImage(alertModel.getListKids().get(0).getPhoto(), options, new ImageLoadingListener() {
                     @Override
                     public void onLoadingStarted(String imageUri, View view) {

@@ -127,9 +127,9 @@
     <string name="Password">Password</string>
     <string name="City">City</string>
     <string name="Phone_number">Phone number</string>
-    <string name="car_type"><![CDATA[Car&apos;s type]]></string>
-    <string name="cart_color"><![CDATA[Car&apos;s color]]></string>
-    <string name="car_number"><![CDATA[Car&apos;s number]]></string>
+    <string name="car_type">نوع السيارة</string>
+    <string name="cart_color">لون السيارة</string>
+    <string name="car_number">رقم السيارة</string>
     <string name="sign_up">Sign up</string>
     <string name="Profil">Profil</string>
     <string name="fullname">الاسم بالكامل</string>
@@ -140,7 +140,7 @@
     <string name="kids_number">kids number:</string>
     <string name="Sign_in">Sign in</string>
     <string name="Forget_password">Forget password</string>
-    <string name="new_account"><![CDATA[You don&apos;t have account? sign up?]]></string>
+    <string name="new_account">You don\'t have account? sign up?</string>
     <string name="number_kids">Kids number:</string>
     <string name="list_of_kids">List of kids</string>
     <string name="phone_numbers">Phone numbers</string>

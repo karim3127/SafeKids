@@ -43,10 +43,8 @@ public class NotiNearbyService extends Service {
 
     public boolean isAlertShow = false;
 
-
-
-
     public class LocalBinder extends Binder {
+
         NotiNearbyService getService() {
             // Return this instance of the service so clients can call public methods
             return NotiNearbyService.this;
@@ -64,7 +62,9 @@ public class NotiNearbyService extends Service {
         toSend = prefs.getString("tosendpush", "oui");
 
 
-        if (BackendSetting.alertmodel != null && toSend.equals("oui")) {
+        if ( toSend.equals("oui")) {
+
+            BackendSetting.alertmodel = new AlertModel();
             if (!startService) {
                 BackendSetting.alertmodel.setLatitude(Double.parseDouble(prefs.getString("altitude", "")));
                 BackendSetting.alertmodel.setLongitude(Double.parseDouble(prefs.getString("longtitude", "")));
@@ -99,13 +99,16 @@ public class NotiNearbyService extends Service {
     public void start() {
 
         countDownTimerMessageAlert = new CountDownTimer(60 * 1000, 1000) {
+
             public void onTick(long millisUntilFinished) {
 
             }
 
             public void onFinish() {
+
                 Log.e("ici", ((BackendSetting.alertmodel.getLatitude() != 0) && (BackendSetting.alertmodel.getLongitude() != 0) && toSend.equals("oui"))+"  "+
                         (BackendSetting.alertmodel.getLatitude() != 0));
+
                 if((BackendSetting.alertmodel.getLatitude() != 0) && (BackendSetting.alertmodel.getLongitude() != 0) && toSend.equals("oui"))
                     sendNotification();
 
@@ -177,6 +180,9 @@ public class NotiNearbyService extends Service {
             publishOptions.putHeader("android-content-text", textMessage);
             publishOptions.putHeader("ios-alert", textMessage);
             publishOptions.putHeader("ios-badge", "1");
+            publishOptions.putHeader("TypeCar", prefs.getString("messageForAlerteType", ""));
+            publishOptions.putHeader("ColorCar", prefs.getString("messageForAlerteColor", ""));
+            publishOptions.putHeader("NumberCar", prefs.getString("messageForAlerteNumber", ""));
             publishOptions.putHeader("latitude", BackendSetting.alertmodel.getLatitude()+"");
             publishOptions.putHeader("longtitude", BackendSetting.alertmodel.getLongitude()+"");
             publishOptions.putHeader("ios-sound", "default");

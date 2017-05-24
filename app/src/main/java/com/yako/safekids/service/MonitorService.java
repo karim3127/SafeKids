@@ -14,6 +14,8 @@ import android.os.Looper;
 import android.support.v4.content.LocalBroadcastManager;
 import android.text.Html;
 import android.text.TextUtils;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.backendless.Backendless;
 import com.backendless.BackendlessCollection;
@@ -100,6 +102,8 @@ public class MonitorService extends Service {
         alertModel = gson.fromJson(json, AlertModel.class);
 
         BackendSetting.alertmodel = alertModel;
+        //editor.putString("Alertelatitude",alertModel.getLatitude()).apply();
+        //editor.putString("Alertelongtitude",alertModel.getLongitude()).apply();
 
         broadcaster = LocalBroadcastManager.getInstance(this);
 
@@ -166,6 +170,7 @@ public class MonitorService extends Service {
 
     @Override
     public void onDestroy() {
+
         initialized = false;
         startService = false;
         isAlertShow = false;
@@ -173,6 +178,7 @@ public class MonitorService extends Service {
         editor.remove("MesKidsStatus").commit();
 
         editor.remove("Alert").commit();
+
         if (countDownTimer != null) {
             countDownTimer.cancel();
             countDownTimer = null;
@@ -196,6 +202,7 @@ public class MonitorService extends Service {
     }
 
     public void start() {
+
         Date now = new Date();
         final Date alertDate = alertModel.getAlertDate();
 
@@ -204,8 +211,11 @@ public class MonitorService extends Service {
         long timeRest = (alertModel.getExtraTime() * 1000 * 60) - diff;
 
         countDownTimer = new CountDownTimer(timeRest, SERVICE_PERIOD) {
+
             public void onTick(long millisUntilFinished) {
+
                 long timeout = millisUntilFinished / 1000;
+
                 if (timeout <= 30 && !isAlertShow) {
                     Intent intent = new Intent(MonitorService.this, FirstAlert.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -215,7 +225,11 @@ public class MonitorService extends Service {
             }
 
             public void onFinish() {
+
+                Log.e("azerty", "azertyyyy");
+
                 isAlertShow = false;
+
                 NormalAlert.finishActivity();
 
                 try {
@@ -226,14 +240,19 @@ public class MonitorService extends Service {
 
             }
         };
+
         countDownTimer.start();
 
         countDownTimerMessageAlert = new CountDownTimer(60 * 1000, 1000) {
+
             public void onTick(long millisUntilFinished) {
 
             }
 
             public void onFinish() {
+
+                //Toast.makeText(getApplicationContext(),"first",Toast.LENGTH_LONG).show();
+                Log.e("azerty", "azertyyyymmmmmmm");
 
                 for (int i = 0; i < listPhones.size(); i++) {
 
@@ -313,13 +332,17 @@ public class MonitorService extends Service {
                         e.printStackTrace();
                     }
                     sendTextMessage("Safe kids", phoneNo, message);//messageForAlerte
+
                     String messagealerte = getResources().getString(R.string.carmessage)+"\n"+
                             getResources().getString(R.string.car_type)+": "+carType+"\n"+
                             getResources().getString(R.string.cart_color)+": "+carColor+"\n"+
                             getResources().getString(R.string.car_number)+": "+carNum;
                     //String messageAlerte = getResources().getString(R.string.thereare_child_sms)+" "+getResources().getString(R.string.risque_sms) + carColor + ""+getResources().getString(R.string.type_voiture_sms) + carType + ""+getResources().getString(R.string.cars_number_sms) + carNum + location + geo + temp + ""+
                             //getResources().getString(R.string.please_see_him_sms)+System.getProperty("line.separator")+"#Safe Kids";
-                    editor.putString("messageForAlerte",messagealerte).commit();
+                    editor.putString("messageForAlerte",messagealerte).apply();
+                    editor.putString("messageForAlerteType",carType).apply();
+                    editor.putString("messageForAlerteColor",carColor).apply();
+                    editor.putString("messageForAlerteNumber",carNum).apply();
 
                 }
 
@@ -343,17 +366,20 @@ public class MonitorService extends Service {
         };
 
         countDownTimerAlertNearBy = new CountDownTimer(60 * 1000 * 2, 1000) {
+
             public void onTick(long millisUntilFinished) {
 
             }
 
             public void onFinish() {
 
+                //Toast.makeText(getApplicationContext(),"seond",Toast.LENGTH_LONG).show();
+
                 Intent intent = new Intent(MonitorService.this, RedAlert.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
 
-
+                Log.e("azerty", "azertyyyynnnnnnnnnnnnn");
 
                 new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                     @Override
@@ -371,6 +397,7 @@ public class MonitorService extends Service {
     }
 
     public boolean sendTextMessage(final String from, final String to, final String msg) {
+
         new Thread(new Runnable() {
             @Override
             public void run() {

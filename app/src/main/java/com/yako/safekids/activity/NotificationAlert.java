@@ -9,8 +9,12 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.PowerManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.TextView;
 import com.safekids.android.R;
 
@@ -32,11 +36,22 @@ public class NotificationAlert extends AppCompatActivity {
     @BindView(R.id.tv_top)
     TextView tv_top;
 
+    @BindView(R.id.et_car_type)
+    EditText et_car_type;
+
+    @BindView(R.id.et_car_color)
+    EditText et_car_color;
+
+    @BindView(R.id.et_car_num)
+    EditText et_car_num;
+
     private SharedPreferences prefs;
     MediaPlayer thePlayer;
     private String langage;
 
     String latitude="", longtitude="";
+
+    private Window wind;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +67,25 @@ public class NotificationAlert extends AppCompatActivity {
         }
 
         ButterKnife.bind(this);//messageForAlerte
-        tv_top.setText(getIntent().getExtras().getString("messageForAlerte"));
+
+        PowerManager.WakeLock screenLock = ((PowerManager)getSystemService(POWER_SERVICE)).newWakeLock(
+                PowerManager.SCREEN_BRIGHT_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP, "TAG");
+        screenLock.acquire();
+
+        wind = this.getWindow();
+        wind.addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
+        wind.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
+        wind.addFlags(WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+
+        wind.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+
+        tv_top.setText(getResources().getString(R.string.carmessage));//getIntent().getExtras().getString("messageForAlerte"));
+
+        et_car_type.setText(getIntent().getExtras().getString("TypeCar"));
+        et_car_color.setText(getIntent().getExtras().getString("ColorCar"));
+        et_car_num.setText(getIntent().getExtras().getString("NumberCar"));
+
 
         AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 20, 0);
@@ -119,6 +152,7 @@ public class NotificationAlert extends AppCompatActivity {
     }
 
     private void accept() {
+
         Uri gmmIntentUri = Uri.parse("google.navigation:q="+latitude+","+longtitude+"");
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
         mapIntent.setPackage("com.google.android.apps.maps");

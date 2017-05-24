@@ -22,6 +22,7 @@ public class MyBroadcastService extends BroadcastReceiver {
     }
 
     public void registerAlarm(Context context) {
+
         Intent myIntent = new Intent(context, AlarmManagerBroadcastReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, myIntent, 0);
 

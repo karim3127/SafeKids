@@ -68,6 +68,9 @@ public class PushReceiver extends BackendlessBroadcastReceiver {
                 Intent intentNotification = new Intent(context, NotificationAlert.class);
                 intentNotification.putExtra("latitude",intent.getExtras().getString("latitude"));
                 intentNotification.putExtra("longtitude",intent.getExtras().getString("longtitude"));
+                intentNotification.putExtra("TypeCar",intent.getExtras().getString("TypeCar"));
+                intentNotification.putExtra("ColorCar",intent.getExtras().getString("ColorCar"));
+                intentNotification.putExtra("NumberCar",intent.getExtras().getString("NumberCar"));
                 intentNotification.putExtra("messageForAlerte",contentText);
                 intentNotification.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intentNotification);

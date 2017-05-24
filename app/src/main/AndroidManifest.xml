@@ -235,6 +235,7 @@
         <receiver android:name="com.yako.safekids.receiver.MyBroadcastService"
             android:enabled="true"
             android:exported="true"
+            android:stopWithTask="false"
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED">
