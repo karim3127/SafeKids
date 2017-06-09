@@ -198,7 +198,10 @@
             android:value="AIzaSyBgmKhSL2PkQoS0IhbUM2gGxmdjCvFJT70" />
 
         <receiver android:name="com.yako.safekids.receiver.PushReceiver"
-            android:permission="com.google.android.c2dm.permission.SEND">
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:enabled="true"
+            android:exported="true"
+            android:stopWithTask="false">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />

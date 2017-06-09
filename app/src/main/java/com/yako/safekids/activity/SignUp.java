@@ -430,7 +430,7 @@ public class SignUp extends AppCompatActivity {
                     editor.putString("passwordUser", et_pass.getText().toString().trim());
 
                     editor.putString("Login", "connecte");
-                    editor.putString("UserId", registeredUser.getUserId());
+                    editor.putString("UserId", registeredUser.getUserId()).apply();
                     editor.putString("name", (String) registeredUser.getProperty("name"));
                     editor.putString("username", (String) registeredUser.getProperty("username"));
                     editor.putString("city", (String) registeredUser.getProperty("city"));
@@ -476,6 +476,7 @@ public class SignUp extends AppCompatActivity {
                     public void handleResponse(DeviceRegistration deviceRegistration) {
                         try {
                             registeredUser.setProperty("deviceRegistration", deviceRegistration.getDeviceId());
+                            editor.putString("UserDeviceToken", deviceRegistration.getDeviceId()).apply();
                             Backendless.UserService.update(registeredUser, new AsyncCallback<BackendlessUser>() {
                                 @Override
                                 public void handleResponse(BackendlessUser backendlessUser) {
@@ -486,6 +487,7 @@ public class SignUp extends AppCompatActivity {
                                 public void handleFault(BackendlessFault backendlessFault) {
                                 }
                             });
+
                         } catch (Exception e) {
 
                         }

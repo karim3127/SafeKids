@@ -349,6 +349,7 @@ public class Connexion extends AppCompatActivity {
                     public void handleResponse(DeviceRegistration deviceRegistration) {
                         try {
                             backendlessUser.setProperty("deviceRegistration", deviceRegistration.getDeviceId());
+                            editor.putString("UserDeviceToken", deviceRegistration.getDeviceId()).apply();
                             Backendless.UserService.update(backendlessUser, new AsyncCallback<BackendlessUser>() {
                                 @Override
                                 public void handleResponse(BackendlessUser backendlessUser) {

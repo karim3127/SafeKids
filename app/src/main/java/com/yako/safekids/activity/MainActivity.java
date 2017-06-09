@@ -10,6 +10,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -28,6 +29,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -78,6 +80,7 @@ import butterknife.OnClick;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 import java.util.Locale;
+import java.util.Map;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -166,6 +169,7 @@ public class MainActivity extends AppCompatActivity {
     Place place;
 
     AlertDialog alertChooseKids;
+    AlertDialog alertToNEw;
     AlertDialog alertTimer;
     RelativeLayout rlBlock;
     AlertModel newAlertModel;
@@ -215,7 +219,7 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 editor.putString("Langage", "en");
             }
-            editor.commit();
+            editor.apply();
         }
 
         langage = prefs.getString("Langage", "ar");
@@ -239,10 +243,10 @@ public class MainActivity extends AppCompatActivity {
             public void onReceive(Context context, final Intent intent) {
                 if (img_center != null) {
 
-                    editor.remove("MesKidsStatus").commit();
+                    editor.remove("MesKidsStatus").apply();
                     listStatus.clear();
 
-                    editor.remove("Alert").commit();
+                    editor.remove("Alert").apply();
 
                     img_center_res = 0;
                     try {
@@ -282,12 +286,77 @@ public class MainActivity extends AppCompatActivity {
 
         registerAlarm(this);
 
-        //Intent intent = new Intent(MainActivity.this, RedAlert.class);
-        //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        //startActivity(intent);
-        //startService(new Intent(this,NotiNearbyService.class));
+
+        checkAppVersion();
+        Log.e("loooll",Double.parseDouble(prefs.getString("altitude", ""))+" "+Double.parseDouble(prefs.getString("longtitude", "")));
     }
 
+    private void checkAppVersion() {
+
+        PackageInfo pInfo = null;
+        try {
+            pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+            final String version = pInfo.versionName;//NouvelVersion
+            Backendless.Data.of( "NouvelVersion" ).findFirst(new AsyncCallback<Map>() {
+                @Override
+                public void handleResponse(Map map) {
+                    if(map.size() > 0){
+                        if(!version.equals(map.get("versionName"))){
+                            try {
+                                //Toast.makeText(getApplicationContext(), map.get(prefs.getString("Langage", "en")) + " ", Toast.LENGTH_LONG).show();
+                                showAlerteDialog(map.get("versionName"));
+                            }catch (Exception ignored){}
+                        }
+                    }
+                }
+
+                @Override
+                public void handleFault(BackendlessFault backendlessFault) {
+
+                }
+            });
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void showAlerteDialog(Object versionName) {
+
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        dialog.setCancelable(true);
+        View dialogView;
+        dialogView = LayoutInflater.from(this).inflate(R.layout.layout_new_version_popup, null);
+        dialog.setView(dialogView);
+
+        alertToNEw = dialog.create();
+        alertToNEw.show();
+
+        int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 420, getResources().getDisplayMetrics());
+        alertToNEw.getWindow().setLayout(RelativeLayout.LayoutParams.MATCH_PARENT, px);
+
+        ((TextView) dialogView).setText(versionName+"");
+
+        TextView txtValide = (TextView) dialogView.findViewById(R.id.txtValide);
+        txtValide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                } catch (android.content.ActivityNotFoundException anfe) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+                }
+            }
+        });
+        TextView txtCancel = (TextView) dialogView.findViewById(R.id.txtCancel);
+        txtCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alertToNEw.dismiss();
+            }
+        });
+    }
 
 
     @OnClick(R.id.tv_add_kids)
@@ -342,6 +411,8 @@ public class MainActivity extends AppCompatActivity {
         audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 20, 0);
         MediaPlayer ringtoneNew = MediaPlayer.create(getApplicationContext(), sound);
         ringtoneNew.start();
+
+
 
     }
 

@@ -73,8 +73,8 @@ public class MonitorService extends Service {
 
     private LocalBroadcastManager broadcaster;
 
-    private String _apiKey = "147bc04c";
-    private String _apiSecret = "03974e37dc071d36";
+    private String _apiKey = "229df376";//"147bc04c";
+    private String _apiSecret = "3233b1ddecbfc4b9";//"03974e37dc071d36";
     private String API_CALL = "https://rest.nexmo.com/sms/json?api_key=%s&api_secret=%s&from=%s&to=%s&text=%s&type=unicode";
 
 

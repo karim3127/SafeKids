@@ -137,7 +137,7 @@ public class NotiNearbyService extends Service {
 
         double myLatitude = BackendSetting.alertmodel.getLatitude();
         double myLongitude = BackendSetting.alertmodel.getLongitude();
-        String query = "distance( "+myLatitude+","+ myLongitude+", locationn.latitude, locationn.longitude ) < mi(0.5)";
+        String query = "distance( "+myLatitude+","+ myLongitude+", locationn.latitude, locationn.longitude ) < mi(1)";
         BackendlessDataQuery dataQuery = new BackendlessDataQuery( query );
         QueryOptions queryOptions = new QueryOptions();
         queryOptions.setRelationsDepth( 1 );
@@ -152,7 +152,7 @@ public class NotiNearbyService extends Service {
 
                 for (BackendlessUser user : cars.getCurrentPage()) {
                     Log.e("ici",String.format("Found car: %s %s", user.getProperty("codeCountry"), user.getProperty("phoneNumber")));
-                    if (!user.getObjectId().equals(prefs.getString("UserId", null))) {
+                    if (!prefs.getString("UserId", "").equals(user.getUserId())) {
                         String textMessage = prefs.getString("messageForAlerte", "");
                         sendNotiftoUser(user, textMessage);
                     }
@@ -171,7 +171,8 @@ public class NotiNearbyService extends Service {
     private void sendNotiftoUser(BackendlessUser user, String textMessage) {
 
         String DeviceToken = (String) user.getProperty("deviceRegistration");
-        if (!TextUtils.isEmpty(DeviceToken)) {
+        if (!TextUtils.isEmpty(DeviceToken) && !DeviceToken.equals(prefs.getString("UserDeviceToken",""))) {
+
             DeliveryOptions deliveryOptions = new DeliveryOptions();
             deliveryOptions.addPushSinglecast(DeviceToken);
             PublishOptions publishOptions = new PublishOptions();

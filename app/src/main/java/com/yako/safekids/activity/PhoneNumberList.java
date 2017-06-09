@@ -255,6 +255,7 @@ public class PhoneNumberList extends AppCompatActivity {
                                         Toast.makeText(PhoneNumberList.this, getResources().getString(R.string.problem_connexion), Toast.LENGTH_SHORT).show();
                                     }
                                 });
+
                             } else {
                                 Toast.makeText(PhoneNumberList.this,getResources().getString(R.string.problem_connexion), Toast.LENGTH_SHORT).show();
                             }

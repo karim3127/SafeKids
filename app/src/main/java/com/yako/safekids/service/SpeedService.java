@@ -1,30 +1,21 @@
 package com.yako.safekids.service;
 
-import android.Manifest;
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.app.Service;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
-import android.graphics.Color;
-import android.location.GpsSatellite;
-import android.location.GpsStatus;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
-import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.backendless.Backendless;
+import com.backendless.BackendlessCollection;
 import com.backendless.BackendlessUser;
 import com.backendless.async.callback.AsyncCallback;
 import com.backendless.exceptions.BackendlessFault;
+import com.backendless.geo.BackendlessGeoQuery;
 import com.backendless.geo.GeoPoint;
+import com.backendless.persistence.BackendlessDataQuery;
+import com.backendless.persistence.QueryOptions;
 import com.yako.safekids.activity.AlertSpeed;
 import com.yako.safekids.activity.MainActivity;
 import com.yako.safekids.activity.NormalAlert;
@@ -35,10 +26,10 @@ import java.util.Calendar;
 
 public class SpeedService extends Service {
 
-  //  private LocationManager mLocationManager;
+    //  private LocationManager mLocationManager;
     public static Data data;
-    private Data.onGpsServiceUpdate onGpsServiceUpdate;
     public static Context context = null;
+    private Data.onGpsServiceUpdate onGpsServiceUpdate;
     private SharedPreferences prefs;
     private SharedPreferences.Editor editor;
 
@@ -111,12 +102,13 @@ public class SpeedService extends Service {
                         }
                     }
 
-                   // Toast.makeText(context, data.getLatitude()+" "+data.getLongtitude(),Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(context, data.getLatitude()+" "+data.getLongtitude(),Toast.LENGTH_SHORT).show();
 
-                    if(!prefs.getString("altitude", "").equals(data.getLatitude()+"") || !prefs.getString("longtitude", "").equals(data.getLongtitude()+"") ){
-                        prefs.edit().putString("altitude", data.getLatitude()+"").apply();
-                        prefs.edit().putString("longtitude", data.getLongtitude()+"").apply();
-                        UpdateLocationUser(data);
+                    if (!prefs.getString("altitude", "").equals(data.getLatitude() + "") || !prefs.getString("longtitude", "").equals(data.getLongtitude() + "")) {
+                        UpdateLocationUser(data, Double.parseDouble(prefs.getString("altitude", "")), Double.parseDouble(prefs.getString("longtitude", "")));
+                        prefs.edit().putString("altitude", data.getLatitude() + "").apply();
+                        prefs.edit().putString("longtitude", data.getLongtitude() + "").apply();
+
                     }
                 }
             }
@@ -125,31 +117,112 @@ public class SpeedService extends Service {
         startService(new Intent(context, GpsServices.class));
     }
 
-    private void UpdateLocationUser(final Data location) {
+    private void UpdateLocationUser(final Data location, final Double latitude, final Double longtitude) {
 
         String currentUserId = prefs.getString("UserId", "");
-        Backendless.UserService.findById(currentUserId, new AsyncCallback<BackendlessUser>() {
+        BackendlessDataQuery dataQuery = new BackendlessDataQuery();
+        dataQuery.setWhereClause("objectId = '" + currentUserId + "'");
+        QueryOptions queryOptions = new QueryOptions();
+        queryOptions.addRelated("locationn");
+        dataQuery.setQueryOptions(queryOptions);
+
+        Backendless.Data.of(BackendlessUser.class).find(dataQuery, new AsyncCallback<BackendlessCollection<BackendlessUser>>() {
             @Override
-            public void handleResponse(final BackendlessUser backendlessUser) {
+            public void handleResponse(BackendlessCollection<BackendlessUser> backendlessUserBackendlessCollection) {
 
-                if(backendlessUser != null){
-                    Log.e("nexmo", backendlessUser+"");
-                    backendlessUser.setProperty("locationn", new GeoPoint(Double.parseDouble(location.getLatitude()),Double.parseDouble(location.getLongtitude())));
-                    Backendless.UserService.update(backendlessUser, new AsyncCallback<BackendlessUser>() {
-                        public void handleResponse(BackendlessUser user) {
-                            // user has been updated
-                            Log.e("nexmo", user+"  55555");
-                        }
+                final BackendlessUser backendlessUser = backendlessUserBackendlessCollection.getCurrentPage().get(0);
 
-                        public void handleFault(BackendlessFault fault) {
-                            // user update failed, to get the error code call fault.getCode()
+                if (backendlessUser != null) {
+                    Log.e("nexmo", backendlessUser + "");
+                    GeoPoint geoPoint = null;
+                    try {
+                        geoPoint = (GeoPoint) backendlessUser.getProperty("locationn");
+
+                    } catch (Exception ignored) {
+                    }
+                    Log.e("55555", geoPoint + "   ");
+                    if (geoPoint != null) {
+
+                        if (geoPoint.getLatitude() != Double.parseDouble(location.getLatitude()) || geoPoint.getLongitude() != Double.parseDouble(location.getLongtitude())) {
+
+                            Backendless.Geo.removePoint(geoPoint, new AsyncCallback<Void>() {
+                                @Override
+                                public void handleResponse(Void response) {
+                                    // GeoPoint has been deleted
+                                    saveData(backendlessUser, location);
+                                }
+
+                                @Override
+                                public void handleFault(BackendlessFault fault) {
+                                    // an error has occurred, the error code can be retrieved with fault.getCode()
+                                }
+                            });
                         }
-                    });
+                    } else {
+
+                        //geoPoint = new GeoPoint(latitude, longtitude);
+                        BackendlessGeoQuery geoQuery = new BackendlessGeoQuery();
+                        geoQuery.setLatitude(latitude);
+                        geoQuery.setLongitude(longtitude);
+                        Backendless.Geo.getPoints(geoQuery, new AsyncCallback<BackendlessCollection<GeoPoint>>() {
+                            @Override
+                            public void handleResponse(BackendlessCollection<GeoPoint> geoPointBackendlessCollection) {
+
+                                if (geoPointBackendlessCollection.getData() != null) {
+                                    if (geoPointBackendlessCollection.getData().size() > 0) {
+                                        GeoPoint geoPoint = geoPointBackendlessCollection.getData().get(0);
+                                        Backendless.Geo.removePoint(geoPoint, new AsyncCallback<Void>() {
+                                            @Override
+                                            public void handleResponse(Void response) {
+                                                // GeoPoint has been deleted
+                                                saveData(backendlessUser, location);
+                                            }
+
+                                            @Override
+                                            public void handleFault(BackendlessFault fault) {
+                                                // an error has occurred, the error code can be retrieved with fault.getCode()
+                                                Log.e("nexmo", fault + " " + latitude + "  " + longtitude);
+                                                saveData(backendlessUser, location);
+                                            }
+                                        });
+                                    } else {
+                                        saveData(backendlessUser, location);
+                                    }
+                                } else {
+                                    saveData(backendlessUser, location);
+                                }
+                            }
+
+                            @Override
+                            public void handleFault(BackendlessFault backendlessFault) {
+                                saveData(backendlessUser, location);
+                            }
+                        });
+
+                    }
+
+
                 }
             }
 
             @Override
             public void handleFault(BackendlessFault backendlessFault) {
+
+            }
+        });
+    }
+
+    private void saveData(BackendlessUser backendlessUser, Data location) {
+
+        backendlessUser.setProperty("locationn", new GeoPoint(Double.parseDouble(location.getLatitude()), Double.parseDouble(location.getLongtitude())));
+        Backendless.UserService.update(backendlessUser, new AsyncCallback<BackendlessUser>() {
+            public void handleResponse(BackendlessUser user) {
+                // user has been updated
+                Log.e("nexmo", user + "  55555");
+            }
+
+            public void handleFault(BackendlessFault fault) {
+                // user update failed, to get the error code call fault.getCode()
             }
         });
     }

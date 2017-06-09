@@ -16,6 +16,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
+
 import com.safekids.android.R;
 
 import butterknife.BindView;
@@ -37,19 +38,19 @@ public class NotificationAlert extends AppCompatActivity {
     TextView tv_top;
 
     @BindView(R.id.et_car_type)
-    EditText et_car_type;
+    TextView et_car_type;
 
     @BindView(R.id.et_car_color)
-    EditText et_car_color;
+    TextView et_car_color;
 
     @BindView(R.id.et_car_num)
-    EditText et_car_num;
+    TextView et_car_num;
 
     private SharedPreferences prefs;
     MediaPlayer thePlayer;
     private String langage;
 
-    String latitude="", longtitude="";
+    String latitude = "", longtitude = "";
 
     private Window wind;
 
@@ -68,7 +69,7 @@ public class NotificationAlert extends AppCompatActivity {
 
         ButterKnife.bind(this);//messageForAlerte
 
-        PowerManager.WakeLock screenLock = ((PowerManager)getSystemService(POWER_SERVICE)).newWakeLock(
+        PowerManager.WakeLock screenLock = ((PowerManager) getSystemService(POWER_SERVICE)).newWakeLock(
                 PowerManager.SCREEN_BRIGHT_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP, "TAG");
         screenLock.acquire();
 
@@ -91,8 +92,8 @@ public class NotificationAlert extends AppCompatActivity {
         audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 20, 0);
 
         Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE);
-        thePlayer = MediaPlayer.create(getApplicationContext(),notification);
-        if(thePlayer != null)
+        thePlayer = MediaPlayer.create(getApplicationContext(), notification);
+        if (thePlayer != null)
             thePlayer.start();
         /*
         final Handler handlersecond = new Handler();
@@ -123,9 +124,10 @@ public class NotificationAlert extends AppCompatActivity {
         Runnable r = new Runnable() {
             @Override
             public void run() {
-                try{
+                try {
                     thePlayer.stop();
-                }catch (Exception e){}
+                } catch (Exception e) {
+                }
             }
         };
         handler.postDelayed(r, 1000 * 10);
@@ -153,7 +155,7 @@ public class NotificationAlert extends AppCompatActivity {
 
     private void accept() {
 
-        Uri gmmIntentUri = Uri.parse("google.navigation:q="+latitude+","+longtitude+"");
+        Uri gmmIntentUri = Uri.parse("google.navigation:q=" + latitude + "," + longtitude + "");
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
         mapIntent.setPackage("com.google.android.apps.maps");
         if (mapIntent.resolveActivity(getPackageManager()) != null) {
